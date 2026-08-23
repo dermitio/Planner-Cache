@@ -187,10 +187,6 @@ The project began with a self-trained proof model, pivoted to frozen Pythia-1.4B
 
 The strongest current limitations are the lack of a full trained open-vocabulary semantic proof on a second model family, the incomplete 1,000-value and active-RP gates for the Gemma sequence prototype, external reconstruction of canonical representation weights, linear router-index hydration, mechanical rather than nuanced personality learning, and slow model-based post-turn review on the measured hardware. See [LIMITATIONS.md](LIMITATIONS.md).
 
-## Contributing
-
-Start with [CONTRIBUTING.md](CONTRIBUTING.md), preserve canonical model independence, and attach every benchmark claim to a script, test, and raw artifact.
-
 ## Citation
 
 Citation metadata is available in [CITATION.bib](CITATION.bib). Author and release metadata should be finalized before a public release.
