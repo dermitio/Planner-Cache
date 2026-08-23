@@ -1,0 +1,173 @@
+{
+  "adapter": {
+    "contains_base_weights": false,
+    "contains_p_state": false,
+    "contains_vocabulary_table": false,
+    "parameter_count": 1,
+    "path": "${REPOSITORY_ROOT}/artifacts/gemma4-e4b-q8-sequence-causal.translate",
+    "sha256": "10b9cc2e3e55b1069886f52da84840b7e291f69c93218bea37ac8beaa4efae28",
+    "size_bytes": 1332
+  },
+  "compatibility": {
+    "bundle_sha256": "d26e632e6c55c72be7fe0803e4cd9f6d8ea03bb2dd8e52c61774e7987c2d9edf",
+    "chat_template_identical": false,
+    "model_sha256": "a4c4177f9fd7e3f56522675afb742f079a53f9226195b7db5e9888c872f053da",
+    "passed": true,
+    "probe_count": 14,
+    "probe_matches": 14,
+    "vocabulary_mismatch_count": 0,
+    "vocabulary_size": 262144
+  },
+  "controlled": {
+    "all_controls_disabled_after_complete": true,
+    "first_token_accuracy": 1.0,
+    "full_string_accuracy": 1.0,
+    "mean_kl_from_base": 10.883306923076923,
+    "mean_latency_ms": 1480.3481538461538,
+    "mean_residual_norm": 8.0,
+    "multi_token_full_string_accuracy": 1.0,
+    "value_count": 13
+  },
+  "failure_count": 3,
+  "failure_values": [
+    "river workshop 208",
+    "131679",
+    "139598"
+  ],
+  "format": "planner-cache-gemma-sequence-translate-summary-v1",
+  "heldout_128": {
+    "all_controls_disabled_after_complete": false,
+    "first_token_accuracy": 1.0,
+    "full_string_accuracy": 0.9765625,
+    "mean_kl_from_base": 6.610114921875,
+    "mean_latency_ms": 2866.5529687499998,
+    "mean_residual_norm": 8.0,
+    "multi_token_full_string_accuracy": 0.9765625,
+    "value_count": 128
+  },
+  "heldout_by_category": {
+    "locations": {
+      "all_controls_disabled_after_complete": false,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 0.9375,
+      "mean_kl_from_base": 6.089895,
+      "mean_latency_ms": 2928.686875,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 0.9375,
+      "value_count": 16
+    },
+    "multi_word": {
+      "all_controls_disabled_after_complete": true,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 1.0,
+      "mean_kl_from_base": 7.0919875,
+      "mean_latency_ms": 2927.1075,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 1.0,
+      "value_count": 16
+    },
+    "numbers": {
+      "all_controls_disabled_after_complete": false,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 0.875,
+      "mean_kl_from_base": 4.057798125,
+      "mean_latency_ms": 3237.436875,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 0.875,
+      "value_count": 16
+    },
+    "objects": {
+      "all_controls_disabled_after_complete": true,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 1.0,
+      "mean_kl_from_base": 6.291728125,
+      "mean_latency_ms": 3384.17,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 1.0,
+      "value_count": 16
+    },
+    "statuses": {
+      "all_controls_disabled_after_complete": true,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 1.0,
+      "mean_kl_from_base": 4.95621125,
+      "mean_latency_ms": 2896.88625,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 1.0,
+      "value_count": 16
+    },
+    "synthetic": {
+      "all_controls_disabled_after_complete": true,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 1.0,
+      "mean_kl_from_base": 7.0396075,
+      "mean_latency_ms": 2635.171875,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 1.0,
+      "value_count": 16
+    },
+    "unseen_names": {
+      "all_controls_disabled_after_complete": true,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 1.0,
+      "mean_kl_from_base": 11.727761875,
+      "mean_latency_ms": 1696.869375,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 1.0,
+      "value_count": 16
+    },
+    "utf8": {
+      "all_controls_disabled_after_complete": true,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 1.0,
+      "mean_kl_from_base": 5.62593,
+      "mean_latency_ms": 3226.095,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 1.0,
+      "value_count": 16
+    }
+  },
+  "inactive": {
+    "conditions": [
+      "wrong_entity",
+      "wrong_relation",
+      "historical",
+      "invalidated",
+      "router_disabled",
+      "translator_disabled",
+      "irrelevant_rp"
+    ],
+    "implementation": "no translation is constructed and llama control vector is disabled",
+    "max_abs_logit_difference_from_base": 0,
+    "rp_preservation": "exact frozen-base logits when no route is accepted"
+  },
+  "not_run": [
+    "1000-value final gate",
+    "learned compact byte-to-sequence-control mapping",
+    "broad natural-RP quality evaluation while relevant control is active"
+  ],
+  "post_sequence": {
+    "interpretation": "Control is disabled after the value. The generated value remains in normal model context and can continue to affect later logits.",
+    "mean_kl_from_base_after_control_disabled": 0.0
+  },
+  "selected_configuration": {
+    "advance": "only after exact target token",
+    "base_model_frozen": true,
+    "control_target": "normalized exact tied-output row for each target token",
+    "layer": 41,
+    "prompt_injection": false,
+    "stop": "on mismatch or after complete sequence",
+    "strength": 8.0
+  },
+  "status": "prototype passes controlled and 128-value sequence gate, broader 1000-value gate not run",
+  "strength_12_failure_subset_ablation": {
+    "all_controls_disabled_after_complete": true,
+    "first_token_accuracy": 1.0,
+    "full_string_accuracy": 1.0,
+    "mean_kl_from_base": 5.519663333333334,
+    "mean_latency_ms": 2807.216666666667,
+    "mean_residual_norm": 12.0,
+    "multi_token_full_string_accuracy": 1.0,
+    "value_count": 3
+  }
+}

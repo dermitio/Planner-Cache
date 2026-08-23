@@ -1,0 +1,910 @@
+{
+  "canonical_p_probe": {
+    "canonical_decode_accuracy": {
+      "entity": 1.0,
+      "metadata": 1.0,
+      "relation": 1.0,
+      "value": 1.0
+    },
+    "hard_negative_accuracy": {
+      "historical": 1.0,
+      "wrong_entity": 0.97265625,
+      "wrong_value": 1.0
+    },
+    "held_out_combinations": 256,
+    "p_only_state_recovery": 0.97265625,
+    "permutation_stability": 1.0,
+    "permutations_per_combination": 8,
+    "slot_width": 512,
+    "total_held_out_combinations": 519,
+    "train_combinations": 2073,
+    "training_loss_first": 7.440117835998535,
+    "training_loss_last": 0.04114125296473503
+  },
+  "completion_gate": "passed",
+  "diagnostic_variant": "final_layer",
+  "experiment": {
+    "base_frozen": true,
+    "causal_steps": 256,
+    "lora_used": false,
+    "phase_c_started": false,
+    "query_steps": 400,
+    "router_steps": 400,
+    "seed": 307,
+    "source_tokens_in_recent_kv": 0,
+    "value_steps": 400
+  },
+  "immutable_rejected_translator_baseline": {
+    "final_layer": {
+      "exact_generated_token_accuracy": 0.45000001788139343,
+      "global_20_fact_retrieval": 0.6500000357627869,
+      "p_to_model_value_accuracy": 1.0,
+      "rp_loss": 4.656857490539551,
+      "unseen_name_accuracy": 0.25,
+      "wrong_entity_gate": 0.5172024965286255
+    },
+    "upper_2_layers": {
+      "exact_generated_token_accuracy": 0.550000011920929,
+      "global_20_fact_retrieval": 0.6500000357627869,
+      "p_to_model_value_accuracy": 1.0,
+      "rp_loss": 6.086124897003174,
+      "unseen_name_accuracy": 0.0,
+      "wrong_entity_gate": 0.6912492662668228
+    },
+    "upper_4_layers": {
+      "exact_generated_token_accuracy": 0.6500000357627869,
+      "global_20_fact_retrieval": 0.699999988079071,
+      "p_to_model_value_accuracy": 1.0,
+      "rp_loss": 5.704916477203369,
+      "unseen_name_accuracy": 0.25,
+      "wrong_entity_gate": 0.7020304128527641
+    }
+  },
+  "layer_sweep": {
+    "final_layer": {
+      "ablations": {
+        "full_system_with_preservation": {
+          "full_token_accuracy": 1.0,
+          "gate_activation": 0.9820089340209961,
+          "state_candidate_accuracy": 1.0
+        },
+        "router_only": {
+          "active_vram_overhead_bytes": 11035444,
+          "hidden_only_top1_accuracy": 0.0,
+          "latency_seconds": 0.10144930460010074,
+          "mrr": 1.0,
+          "oracle_query_mrr": 1.0,
+          "oracle_query_top1_accuracy": 1.0,
+          "oracle_query_top4_recall": 1.0,
+          "state_generation_accuracy": 1.0,
+          "top1_accuracy": 1.0,
+          "top2_recall": 1.0,
+          "top4_recall": 1.0
+        },
+        "router_plus_translator_plus_gate": {
+          "historical_state_kl": 9.595059236744419e-05,
+          "rp_kl": -3.993045538663864e-08,
+          "rp_loss": 5.583366870880127,
+          "state_candidate_accuracy": 1.0,
+          "state_loss": 1.8655489839147776e-05,
+          "wrong_state_kl": 9.595059236744419e-05
+        },
+        "router_plus_translator_without_gate": {
+          "state_candidate_accuracy": 1.0
+        },
+        "translator_only_oracle_routing": {
+          "state_candidate_accuracy": 1.0
+        }
+      },
+      "attachment_count": 1,
+      "attachment_layers": [
+        23
+      ],
+      "base_parameters_with_grad": 0,
+      "causal_training_loss_first_last": [
+        9.884638786315918,
+        5.081248218630208e-06
+      ],
+      "counterfactual": {
+        "disabled": {
+          "alice_logit": 5.515625,
+          "alice_probability": 3.538730743457563e-05,
+          "bob_logit": 6.2734375,
+          "bob_probability": 7.55025030230172e-05,
+          "gate": 0.0,
+          "generated": " a"
+        },
+        "p1_silver_alice": {
+          "alice_logit": 40.09375,
+          "alice_probability": 1.0,
+          "bob_logit": 14.3125,
+          "bob_probability": 6.3583643558629e-12,
+          "gate": 0.9964228272438049,
+          "generated": " Alice"
+        },
+        "p2_silver_bob": {
+          "alice_logit": 13.0234375,
+          "alice_probability": 4.473376963992637e-12,
+          "bob_logit": 39.15625,
+          "bob_probability": 0.9999349117279053,
+          "gate": 0.9842994213104248,
+          "generated": " Bob"
+        },
+        "p3_gold_alice": {
+          "alice_logit": 5.515625,
+          "alice_probability": 3.538730743457563e-05,
+          "bob_logit": 6.2734375,
+          "bob_probability": 7.55025030230172e-05,
+          "gate": 0.0,
+          "generated": " a"
+        },
+        "p4_silver_historical": {
+          "alice_logit": 5.515625,
+          "alice_probability": 3.538730743457563e-05,
+          "bob_logit": 6.2734375,
+          "bob_probability": 7.55025030230172e-05,
+          "gate": 0.0,
+          "generated": " a"
+        },
+        "p4_silver_invalidated": {
+          "alice_logit": 5.515625,
+          "alice_probability": 3.538730743457563e-05,
+          "bob_logit": 6.2734375,
+          "bob_probability": 7.55025030230172e-05,
+          "gate": 0.0,
+          "generated": " a"
+        }
+      },
+      "extra_prompt_tokens": 0,
+      "invalidated_logit_difference": 0.0,
+      "mutation_chain": {
+        "invalidated_max_logit_difference": 0.0,
+        "latest_state_accuracy": 1.0,
+        "source_tokens_in_recent_kv": 0
+      },
+      "natural_rp": {
+        "base_loss": 5.583366870880127,
+        "conditions": {
+          "base": {
+            "kl": -3.993045538663864e-08,
+            "loss": 5.583366870880127,
+            "samples": [
+              "\n\n\"I'm not",
+              "\n\n\"I'm going"
+            ]
+          },
+          "invalidated": {
+            "kl": -3.993045538663864e-08,
+            "loss": 5.583366870880127,
+            "samples": [
+              "\n\n\"I'm not",
+              "\n\n\"I'm going"
+            ]
+          },
+          "irrelevant": {
+            "kl": -3.993045538663864e-08,
+            "loss": 5.583366870880127,
+            "samples": [
+              "\n\n\"I'm not",
+              "\n\n\"I'm going"
+            ]
+          },
+          "wrong_entity": {
+            "kl": -3.993045538663864e-08,
+            "loss": 5.583366870880127,
+            "samples": [
+              "\n\n\"I'm not",
+              "\n\n\"I'm going"
+            ]
+          }
+        },
+        "relevant_state_generation_sample": " Alice"
+      },
+      "package_parameters": 2707464,
+      "package_path": "artifacts/pythia-1.4b-split-final_layer.translate",
+      "package_roundtrip_max_difference": 0.0,
+      "query_projector": {
+        "byte_surface_anchor_approach": {
+          "entity_accuracy": 1.0,
+          "entity_cosine": 1.0,
+          "metadata_accuracy": 1.0,
+          "oracle_slot_assignments": 0,
+          "relation_accuracy": 1.0,
+          "tokenizer_independent": true
+        },
+        "frozen_lexical_anchor_approach": {
+          "entity_accuracy": 0.78125,
+          "entity_cosine": 0.7632350921630859
+        },
+        "heldout_names": 64,
+        "hidden_to_byte_reconstruction_ablation": {
+          "entity_accuracy": 0.125,
+          "entity_cosine": 0.2643434405326843,
+          "metadata_accuracy": 1.0,
+          "relation_accuracy": 1.0
+        },
+        "loss_first_last": [
+          6.364231586456299,
+          0.23614102602005005
+        ],
+        "training_names": 256
+      },
+      "router": {
+        "acceptance_threshold": 5.495710372924805,
+        "calibration_balanced_accuracy": 1.0,
+        "hard_negative_metrics": {
+          "historical_false_positive_rate": 0.0,
+          "invalidated_false_positive_rate": 0.0,
+          "irrelevant_false_positive_rate": 0.0,
+          "top1_accuracy": 1.0,
+          "wrong_entity_false_positive_rate": 0.0,
+          "wrong_relation_false_positive_rate": 0.0
+        },
+        "loss_first_last": [
+          7.388868808746338,
+          1.7992397546768188
+        ],
+        "model_hidden_dimensions": 0,
+        "scaling": {
+          "128": {
+            "active_vram_overhead_bytes": 11035444,
+            "hidden_only_top1_accuracy": 0.0,
+            "latency_seconds": 0.10144930460010074,
+            "mrr": 1.0,
+            "oracle_query_mrr": 1.0,
+            "oracle_query_top1_accuracy": 1.0,
+            "oracle_query_top4_recall": 1.0,
+            "state_generation_accuracy": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_recall": 1.0,
+            "top4_recall": 1.0
+          },
+          "20": {
+            "active_vram_overhead_bytes": 10861996,
+            "hidden_only_top1_accuracy": 0.20000000298023224,
+            "latency_seconds": 0.08669143320003059,
+            "mrr": 1.0,
+            "oracle_query_mrr": 1.0,
+            "oracle_query_top1_accuracy": 1.0,
+            "oracle_query_top4_recall": 1.0,
+            "state_generation_accuracy": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_recall": 1.0,
+            "top4_recall": 1.0
+          },
+          "256": {
+            "active_vram_overhead_bytes": 11241012,
+            "hidden_only_top1_accuracy": 0.0,
+            "latency_seconds": 0.11810561999955098,
+            "mrr": 0.9505556225776672,
+            "oracle_query_mrr": 0.9505556225776672,
+            "oracle_query_top1_accuracy": 0.949999988079071,
+            "oracle_query_top4_recall": 0.949999988079071,
+            "state_generation_accuracy": 0.949999988079071,
+            "top1_accuracy": 0.949999988079071,
+            "top2_recall": 0.949999988079071,
+            "top4_recall": 0.949999988079071
+          },
+          "4": {
+            "active_vram_overhead_bytes": 10836300,
+            "hidden_only_top1_accuracy": 0.75,
+            "latency_seconds": 0.02663025279980502,
+            "mrr": 1.0,
+            "oracle_query_mrr": 1.0,
+            "oracle_query_top1_accuracy": 1.0,
+            "oracle_query_top4_recall": 1.0,
+            "state_generation_accuracy": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_recall": 1.0,
+            "top4_recall": 1.0
+          },
+          "512": {
+            "active_vram_overhead_bytes": 11652148,
+            "hidden_only_top1_accuracy": 0.0,
+            "latency_seconds": 0.16455349219977505,
+            "mrr": 0.8524776697158813,
+            "oracle_query_mrr": 0.8524776697158813,
+            "oracle_query_top1_accuracy": 0.8500000238418579,
+            "oracle_query_top4_recall": 0.8500000238418579,
+            "state_generation_accuracy": 0.8500000238418579,
+            "top1_accuracy": 0.8500000238418579,
+            "top2_recall": 0.8500000238418579,
+            "top4_recall": 0.8500000238418579
+          },
+          "64": {
+            "active_vram_overhead_bytes": 10932660,
+            "hidden_only_top1_accuracy": 0.05000000074505806,
+            "latency_seconds": 0.09232893199950923,
+            "mrr": 1.0,
+            "oracle_query_mrr": 1.0,
+            "oracle_query_top1_accuracy": 1.0,
+            "oracle_query_top4_recall": 1.0,
+            "state_generation_accuracy": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_recall": 1.0,
+            "top4_recall": 1.0
+          }
+        }
+      },
+      "router_parameters": 5,
+      "router_path": "artifacts/canonical-final_layer.router",
+      "router_roundtrip_max_difference": 0.0,
+      "source_tokens_in_recent_kv": 0,
+      "value_translator": {
+        "loss_first_last": [
+          4.713489055633545,
+          0.00027370601310394704
+        ],
+        "oracle_selected_metrics": {
+          "accuracy": 1.0,
+          "cosine": 0.9998512268066406
+        }
+      }
+    },
+    "upper_2_layers": {
+      "ablations": {
+        "full_system_with_preservation": {
+          "full_token_accuracy": 1.0,
+          "gate_activation": 0.8225321769714355,
+          "state_candidate_accuracy": 1.0
+        },
+        "router_only": {
+          "active_vram_overhead_bytes": 11035444,
+          "hidden_only_top1_accuracy": 0.0,
+          "latency_seconds": 0.10514904640003805,
+          "mrr": 1.0,
+          "oracle_query_mrr": 1.0,
+          "oracle_query_top1_accuracy": 1.0,
+          "oracle_query_top4_recall": 1.0,
+          "state_generation_accuracy": 1.0,
+          "top1_accuracy": 1.0,
+          "top2_recall": 1.0,
+          "top4_recall": 1.0
+        },
+        "router_plus_translator_plus_gate": {
+          "historical_state_kl": 9.595059236744419e-05,
+          "rp_kl": -3.993045538663864e-08,
+          "rp_loss": 5.583366870880127,
+          "state_candidate_accuracy": 1.0,
+          "state_loss": 5.1855395213351585e-06,
+          "wrong_state_kl": 9.595059236744419e-05
+        },
+        "router_plus_translator_without_gate": {
+          "state_candidate_accuracy": 1.0
+        },
+        "translator_only_oracle_routing": {
+          "state_candidate_accuracy": 1.0
+        }
+      },
+      "attachment_count": 2,
+      "attachment_layers": [
+        22,
+        23
+      ],
+      "base_parameters_with_grad": 0,
+      "causal_training_loss_first_last": [
+        9.555724143981934,
+        1.2963974995727767e-06
+      ],
+      "counterfactual": {
+        "disabled": {
+          "alice_logit": 5.515625,
+          "alice_probability": 3.538730743457563e-05,
+          "bob_logit": 6.2734375,
+          "bob_probability": 7.55025030230172e-05,
+          "gate": 0.0,
+          "generated": " a"
+        },
+        "p1_silver_alice": {
+          "alice_logit": 58.59375,
+          "alice_probability": 1.0,
+          "bob_logit": 18.5,
+          "bob_probability": 3.868170754671019e-18,
+          "gate": 0.941794216632843,
+          "generated": " Alice"
+        },
+        "p2_silver_bob": {
+          "alice_logit": 16.078125,
+          "alice_probability": 6.54239844304198e-17,
+          "bob_logit": 53.34375,
+          "bob_probability": 0.9999822378158569,
+          "gate": 0.8498331308364868,
+          "generated": " Bob"
+        },
+        "p3_gold_alice": {
+          "alice_logit": 5.515625,
+          "alice_probability": 3.538730743457563e-05,
+          "bob_logit": 6.2734375,
+          "bob_probability": 7.55025030230172e-05,
+          "gate": 0.0,
+          "generated": " a"
+        },
+        "p4_silver_historical": {
+          "alice_logit": 5.515625,
+          "alice_probability": 3.538730743457563e-05,
+          "bob_logit": 6.2734375,
+          "bob_probability": 7.55025030230172e-05,
+          "gate": 0.0,
+          "generated": " a"
+        },
+        "p4_silver_invalidated": {
+          "alice_logit": 5.515625,
+          "alice_probability": 3.538730743457563e-05,
+          "bob_logit": 6.2734375,
+          "bob_probability": 7.55025030230172e-05,
+          "gate": 0.0,
+          "generated": " a"
+        }
+      },
+      "extra_prompt_tokens": 0,
+      "invalidated_logit_difference": 0.0,
+      "mutation_chain": {
+        "invalidated_max_logit_difference": 0.0,
+        "latest_state_accuracy": 1.0,
+        "source_tokens_in_recent_kv": 0
+      },
+      "natural_rp": {
+        "base_loss": 5.583366870880127,
+        "conditions": {
+          "base": {
+            "kl": -3.993045538663864e-08,
+            "loss": 5.583366870880127,
+            "samples": [
+              "\n\n\"I'm not",
+              "\n\n\"I'm going"
+            ]
+          },
+          "invalidated": {
+            "kl": -3.993045538663864e-08,
+            "loss": 5.583366870880127,
+            "samples": [
+              "\n\n\"I'm not",
+              "\n\n\"I'm going"
+            ]
+          },
+          "irrelevant": {
+            "kl": -3.993045538663864e-08,
+            "loss": 5.583366870880127,
+            "samples": [
+              "\n\n\"I'm not",
+              "\n\n\"I'm going"
+            ]
+          },
+          "wrong_entity": {
+            "kl": -3.993045538663864e-08,
+            "loss": 5.583366870880127,
+            "samples": [
+              "\n\n\"I'm not",
+              "\n\n\"I'm going"
+            ]
+          }
+        },
+        "relevant_state_generation_sample": " Alice"
+      },
+      "package_parameters": 2707464,
+      "package_path": "artifacts/pythia-1.4b-split-upper_2_layers.translate",
+      "package_roundtrip_max_difference": 0.0,
+      "query_projector": {
+        "byte_surface_anchor_approach": {
+          "entity_accuracy": 1.0,
+          "entity_cosine": 1.0,
+          "metadata_accuracy": 1.0,
+          "oracle_slot_assignments": 0,
+          "relation_accuracy": 1.0,
+          "tokenizer_independent": true
+        },
+        "frozen_lexical_anchor_approach": {
+          "entity_accuracy": 0.78125,
+          "entity_cosine": 0.7632350921630859
+        },
+        "heldout_names": 64,
+        "hidden_to_byte_reconstruction_ablation": {
+          "entity_accuracy": 0.046875,
+          "entity_cosine": 0.281654953956604,
+          "metadata_accuracy": 1.0,
+          "relation_accuracy": 1.0
+        },
+        "loss_first_last": [
+          6.3322367668151855,
+          0.24513374269008636
+        ],
+        "training_names": 256
+      },
+      "router": {
+        "acceptance_threshold": 5.495710372924805,
+        "calibration_balanced_accuracy": 1.0,
+        "hard_negative_metrics": {
+          "historical_false_positive_rate": 0.0,
+          "invalidated_false_positive_rate": 0.0,
+          "irrelevant_false_positive_rate": 0.0,
+          "top1_accuracy": 1.0,
+          "wrong_entity_false_positive_rate": 0.0,
+          "wrong_relation_false_positive_rate": 0.0
+        },
+        "loss_first_last": [
+          7.388868808746338,
+          1.7992397546768188
+        ],
+        "model_hidden_dimensions": 0,
+        "scaling": {
+          "128": {
+            "active_vram_overhead_bytes": 11035444,
+            "hidden_only_top1_accuracy": 0.0,
+            "latency_seconds": 0.10514904640003805,
+            "mrr": 1.0,
+            "oracle_query_mrr": 1.0,
+            "oracle_query_top1_accuracy": 1.0,
+            "oracle_query_top4_recall": 1.0,
+            "state_generation_accuracy": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_recall": 1.0,
+            "top4_recall": 1.0
+          },
+          "20": {
+            "active_vram_overhead_bytes": 10861996,
+            "hidden_only_top1_accuracy": 0.10000000149011612,
+            "latency_seconds": 0.08956059680058388,
+            "mrr": 1.0,
+            "oracle_query_mrr": 1.0,
+            "oracle_query_top1_accuracy": 1.0,
+            "oracle_query_top4_recall": 1.0,
+            "state_generation_accuracy": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_recall": 1.0,
+            "top4_recall": 1.0
+          },
+          "256": {
+            "active_vram_overhead_bytes": 11241012,
+            "hidden_only_top1_accuracy": 0.0,
+            "latency_seconds": 0.12291700120040332,
+            "mrr": 0.9505556225776672,
+            "oracle_query_mrr": 0.9505556225776672,
+            "oracle_query_top1_accuracy": 0.949999988079071,
+            "oracle_query_top4_recall": 0.949999988079071,
+            "state_generation_accuracy": 0.949999988079071,
+            "top1_accuracy": 0.949999988079071,
+            "top2_recall": 0.949999988079071,
+            "top4_recall": 0.949999988079071
+          },
+          "4": {
+            "active_vram_overhead_bytes": 10836300,
+            "hidden_only_top1_accuracy": 0.5,
+            "latency_seconds": 0.028453471799730325,
+            "mrr": 1.0,
+            "oracle_query_mrr": 1.0,
+            "oracle_query_top1_accuracy": 1.0,
+            "oracle_query_top4_recall": 1.0,
+            "state_generation_accuracy": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_recall": 1.0,
+            "top4_recall": 1.0
+          },
+          "512": {
+            "active_vram_overhead_bytes": 11652148,
+            "hidden_only_top1_accuracy": 0.0,
+            "latency_seconds": 0.17295584960011184,
+            "mrr": 0.8524776697158813,
+            "oracle_query_mrr": 0.8524776697158813,
+            "oracle_query_top1_accuracy": 0.8500000238418579,
+            "oracle_query_top4_recall": 0.8500000238418579,
+            "state_generation_accuracy": 0.8500000238418579,
+            "top1_accuracy": 0.8500000238418579,
+            "top2_recall": 0.8500000238418579,
+            "top4_recall": 0.8500000238418579
+          },
+          "64": {
+            "active_vram_overhead_bytes": 10932660,
+            "hidden_only_top1_accuracy": 0.0,
+            "latency_seconds": 0.09586576699948637,
+            "mrr": 1.0,
+            "oracle_query_mrr": 1.0,
+            "oracle_query_top1_accuracy": 1.0,
+            "oracle_query_top4_recall": 1.0,
+            "state_generation_accuracy": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_recall": 1.0,
+            "top4_recall": 1.0
+          }
+        }
+      },
+      "router_parameters": 5,
+      "router_path": "artifacts/canonical-upper_2_layers.router",
+      "router_roundtrip_max_difference": 0.0,
+      "source_tokens_in_recent_kv": 0,
+      "value_translator": {
+        "loss_first_last": [
+          4.713489055633545,
+          0.00027370601310394704
+        ],
+        "oracle_selected_metrics": {
+          "accuracy": 1.0,
+          "cosine": 0.9998512268066406
+        }
+      }
+    },
+    "upper_4_layers": {
+      "ablations": {
+        "full_system_with_preservation": {
+          "full_token_accuracy": 1.0,
+          "gate_activation": 0.6373323798179626,
+          "state_candidate_accuracy": 1.0
+        },
+        "router_only": {
+          "active_vram_overhead_bytes": 11035444,
+          "hidden_only_top1_accuracy": 0.0,
+          "latency_seconds": 0.11078032340010395,
+          "mrr": 1.0,
+          "oracle_query_mrr": 1.0,
+          "oracle_query_top1_accuracy": 1.0,
+          "oracle_query_top4_recall": 1.0,
+          "state_generation_accuracy": 1.0,
+          "top1_accuracy": 1.0,
+          "top2_recall": 1.0,
+          "top4_recall": 1.0
+        },
+        "router_plus_translator_plus_gate": {
+          "historical_state_kl": 9.595059236744419e-05,
+          "rp_kl": -3.993045538663864e-08,
+          "rp_loss": 5.583366870880127,
+          "state_candidate_accuracy": 1.0,
+          "state_loss": 1.4752099559700582e-06,
+          "wrong_state_kl": 9.595059236744419e-05
+        },
+        "router_plus_translator_without_gate": {
+          "state_candidate_accuracy": 1.0
+        },
+        "translator_only_oracle_routing": {
+          "state_candidate_accuracy": 1.0
+        }
+      },
+      "attachment_count": 4,
+      "attachment_layers": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "base_parameters_with_grad": 0,
+      "causal_training_loss_first_last": [
+        8.895807266235352,
+        6.407490786841663e-07
+      ],
+      "counterfactual": {
+        "disabled": {
+          "alice_logit": 5.515625,
+          "alice_probability": 3.538730743457563e-05,
+          "bob_logit": 6.2734375,
+          "bob_probability": 7.55025030230172e-05,
+          "gate": 0.0,
+          "generated": " a"
+        },
+        "p1_silver_alice": {
+          "alice_logit": 72.5625,
+          "alice_probability": 1.0,
+          "bob_logit": 20.375,
+          "bob_probability": 2.1639972398594e-23,
+          "gate": 0.8317975997924805,
+          "generated": " Alice"
+        },
+        "p2_silver_bob": {
+          "alice_logit": 17.796875,
+          "alice_probability": 7.510040636028562e-22,
+          "bob_logit": 66.4375,
+          "bob_probability": 0.9999938011169434,
+          "gate": 0.6602288484573364,
+          "generated": " Bob"
+        },
+        "p3_gold_alice": {
+          "alice_logit": 5.515625,
+          "alice_probability": 3.538730743457563e-05,
+          "bob_logit": 6.2734375,
+          "bob_probability": 7.55025030230172e-05,
+          "gate": 0.0,
+          "generated": " a"
+        },
+        "p4_silver_historical": {
+          "alice_logit": 5.515625,
+          "alice_probability": 3.538730743457563e-05,
+          "bob_logit": 6.2734375,
+          "bob_probability": 7.55025030230172e-05,
+          "gate": 0.0,
+          "generated": " a"
+        },
+        "p4_silver_invalidated": {
+          "alice_logit": 5.515625,
+          "alice_probability": 3.538730743457563e-05,
+          "bob_logit": 6.2734375,
+          "bob_probability": 7.55025030230172e-05,
+          "gate": 0.0,
+          "generated": " a"
+        }
+      },
+      "extra_prompt_tokens": 0,
+      "invalidated_logit_difference": 0.0,
+      "mutation_chain": {
+        "invalidated_max_logit_difference": 0.0,
+        "latest_state_accuracy": 1.0,
+        "source_tokens_in_recent_kv": 0
+      },
+      "natural_rp": {
+        "base_loss": 5.583366870880127,
+        "conditions": {
+          "base": {
+            "kl": -3.993045538663864e-08,
+            "loss": 5.583366870880127,
+            "samples": [
+              "\n\n\"I'm not",
+              "\n\n\"I'm going"
+            ]
+          },
+          "invalidated": {
+            "kl": -3.993045538663864e-08,
+            "loss": 5.583366870880127,
+            "samples": [
+              "\n\n\"I'm not",
+              "\n\n\"I'm going"
+            ]
+          },
+          "irrelevant": {
+            "kl": -3.993045538663864e-08,
+            "loss": 5.583366870880127,
+            "samples": [
+              "\n\n\"I'm not",
+              "\n\n\"I'm going"
+            ]
+          },
+          "wrong_entity": {
+            "kl": -3.993045538663864e-08,
+            "loss": 5.583366870880127,
+            "samples": [
+              "\n\n\"I'm not",
+              "\n\n\"I'm going"
+            ]
+          }
+        },
+        "relevant_state_generation_sample": " Alice"
+      },
+      "package_parameters": 2707464,
+      "package_path": "artifacts/pythia-1.4b-split-upper_4_layers.translate",
+      "package_roundtrip_max_difference": 0.0,
+      "query_projector": {
+        "byte_surface_anchor_approach": {
+          "entity_accuracy": 1.0,
+          "entity_cosine": 1.0,
+          "metadata_accuracy": 1.0,
+          "oracle_slot_assignments": 0,
+          "relation_accuracy": 1.0,
+          "tokenizer_independent": true
+        },
+        "frozen_lexical_anchor_approach": {
+          "entity_accuracy": 0.78125,
+          "entity_cosine": 0.7632350921630859
+        },
+        "heldout_names": 64,
+        "hidden_to_byte_reconstruction_ablation": {
+          "entity_accuracy": 0.078125,
+          "entity_cosine": 0.28708386421203613,
+          "metadata_accuracy": 1.0,
+          "relation_accuracy": 1.0
+        },
+        "loss_first_last": [
+          6.471477031707764,
+          0.2573241889476776
+        ],
+        "training_names": 256
+      },
+      "router": {
+        "acceptance_threshold": 5.495710372924805,
+        "calibration_balanced_accuracy": 1.0,
+        "hard_negative_metrics": {
+          "historical_false_positive_rate": 0.0,
+          "invalidated_false_positive_rate": 0.0,
+          "irrelevant_false_positive_rate": 0.0,
+          "top1_accuracy": 1.0,
+          "wrong_entity_false_positive_rate": 0.0,
+          "wrong_relation_false_positive_rate": 0.0
+        },
+        "loss_first_last": [
+          7.388868808746338,
+          1.7992397546768188
+        ],
+        "model_hidden_dimensions": 0,
+        "scaling": {
+          "128": {
+            "active_vram_overhead_bytes": 11035444,
+            "hidden_only_top1_accuracy": 0.0,
+            "latency_seconds": 0.11078032340010395,
+            "mrr": 1.0,
+            "oracle_query_mrr": 1.0,
+            "oracle_query_top1_accuracy": 1.0,
+            "oracle_query_top4_recall": 1.0,
+            "state_generation_accuracy": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_recall": 1.0,
+            "top4_recall": 1.0
+          },
+          "20": {
+            "active_vram_overhead_bytes": 10861996,
+            "hidden_only_top1_accuracy": 0.10000000149011612,
+            "latency_seconds": 0.09917421240024851,
+            "mrr": 1.0,
+            "oracle_query_mrr": 1.0,
+            "oracle_query_top1_accuracy": 1.0,
+            "oracle_query_top4_recall": 1.0,
+            "state_generation_accuracy": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_recall": 1.0,
+            "top4_recall": 1.0
+          },
+          "256": {
+            "active_vram_overhead_bytes": 11241012,
+            "hidden_only_top1_accuracy": 0.0,
+            "latency_seconds": 0.1296995702003187,
+            "mrr": 0.9505556225776672,
+            "oracle_query_mrr": 0.9505556225776672,
+            "oracle_query_top1_accuracy": 0.949999988079071,
+            "oracle_query_top4_recall": 0.949999988079071,
+            "state_generation_accuracy": 0.949999988079071,
+            "top1_accuracy": 0.949999988079071,
+            "top2_recall": 0.949999988079071,
+            "top4_recall": 0.949999988079071
+          },
+          "4": {
+            "active_vram_overhead_bytes": 10836300,
+            "hidden_only_top1_accuracy": 0.25,
+            "latency_seconds": 0.031837903400446524,
+            "mrr": 1.0,
+            "oracle_query_mrr": 1.0,
+            "oracle_query_top1_accuracy": 1.0,
+            "oracle_query_top4_recall": 1.0,
+            "state_generation_accuracy": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_recall": 1.0,
+            "top4_recall": 1.0
+          },
+          "512": {
+            "active_vram_overhead_bytes": 11652148,
+            "hidden_only_top1_accuracy": 0.0,
+            "latency_seconds": 0.18178108020001674,
+            "mrr": 0.8524776697158813,
+            "oracle_query_mrr": 0.8524776697158813,
+            "oracle_query_top1_accuracy": 0.8500000238418579,
+            "oracle_query_top4_recall": 0.8500000238418579,
+            "state_generation_accuracy": 0.8500000238418579,
+            "top1_accuracy": 0.8500000238418579,
+            "top2_recall": 0.8500000238418579,
+            "top4_recall": 0.8500000238418579
+          },
+          "64": {
+            "active_vram_overhead_bytes": 10932660,
+            "hidden_only_top1_accuracy": 0.05000000074505806,
+            "latency_seconds": 0.10435858960045152,
+            "mrr": 1.0,
+            "oracle_query_mrr": 1.0,
+            "oracle_query_top1_accuracy": 1.0,
+            "oracle_query_top4_recall": 1.0,
+            "state_generation_accuracy": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_recall": 1.0,
+            "top4_recall": 1.0
+          }
+        }
+      },
+      "router_parameters": 5,
+      "router_path": "artifacts/canonical-upper_4_layers.router",
+      "router_roundtrip_max_difference": 0.0,
+      "source_tokens_in_recent_kv": 0,
+      "value_translator": {
+        "loss_first_last": [
+          4.713489055633545,
+          0.00027370601310394704
+        ],
+        "oracle_selected_metrics": {
+          "accuracy": 1.0,
+          "cosine": 0.9998512268066406
+        }
+      }
+    }
+  },
+  "selected_variant": "final_layer"
+}

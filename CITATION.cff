@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use Planner Cache, cite the software and accompanying preprint."
+title: "Planner Cache: A Portable Bounded Semantic-State Layer for Frozen Language Models"
+type: software
+version: 0.1.0
+date-released: 2026-08-23
+authors:
+  - name: "Planner Cache contributors"
+abstract: >-
+  A portable bounded semantic-state layer for frozen language models with a
+  canonical P-cache, universal router, model-specific TTL and LTL compatibility,
+  and disk-resident P-package personality state.
+license: "LicenseRef-Proprietary-NoGrant"

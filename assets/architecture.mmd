@@ -1,0 +1,24 @@
+flowchart LR
+subgraph Runtime[Model and runtime owned]
+KV[Recent KV]
+LM[Frozen model]
+EXT[History and tool systems]
+end
+subgraph Planner[Planner Cache owned]
+P[P-cache]
+R[Universal router]
+C{Compatibility boundary}
+N[Native P]
+TTL[.ttl semantic/internal]
+LTL[.ltl lexical/output]
+PKG[P-package .ppkg]
+REVIEW[Hidden post-turn review]
+end
+KV --> LM
+LM -. side-channel after visible reply .-> REVIEW --> P
+P --> R --> C
+C --> N --> LM
+C --> TTL --> LM
+C --> LTL --> LM
+PKG -. selected canonical state .-> R
+EXT -. external evidence .-> LM

@@ -1,0 +1,58 @@
+{
+  "format": "planner-cache-post-turn-memory-review-acceptance-v1",
+  "date": "2026-08-23",
+  "gemma": {
+    "runtime": "Gemma4 E4B Q8 through llama.cpp",
+    "reviewer": "same frozen Gemma runtime without LTL",
+    "session_id": "benchmark-session-gemma",
+    "turns": [
+      {
+        "user": "*I leave the brass key inside the kitchen drawer.*",
+        "operation": "CREATE",
+        "entity": "brass key",
+        "relation": "location",
+        "value": "kitchen drawer",
+        "source": "rp_action",
+        "confidence": 1.0,
+        "review_latency_seconds": 43.14148591599951
+      },
+      {
+        "user": "*I take the key and put it into my coat pocket.*",
+        "operation": "MODIFY",
+        "entity": "brass key",
+        "relation": "location",
+        "value": "coat pocket",
+        "source": "rp_action",
+        "confidence": 1.0,
+        "review_latency_seconds": 48.18768195499433
+      }
+    ],
+    "final_active_state_count": 1,
+    "final_value": "coat pocket",
+    "stale_kitchen_drawer_active": false
+  },
+  "pythia": {
+    "runtime": "frozen Pythia-1.4B with TTL",
+    "reviewer": "frozen Gemma llama.cpp CPU structured reviewer without TTL or LTL",
+    "session_id": "benchmark-session-pythia",
+    "turn": {
+      "user": "*I leave the brass key inside the kitchen drawer.*",
+      "operation": "CREATE",
+      "entity": "brass key",
+      "relation": "location",
+      "value": "kitchen drawer",
+      "source": "rp_action",
+      "confidence": 1.0,
+      "review_latency_seconds": 65.49500731100852
+    },
+    "final_active_state_count": 1
+  },
+  "assertions": {
+    "natural_rp_create": true,
+    "natural_rp_modify": true,
+    "single_current_value": true,
+    "pythia_interactive_path": true,
+    "gemma_interactive_path": true,
+    "review_ttl_ltl_disabled": true
+  }
+}

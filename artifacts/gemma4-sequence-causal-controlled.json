@@ -1,0 +1,836 @@
+{
+  "active": {
+    "attachment_layer": 41,
+    "command": [
+      "${TEMP_DIR}/planner-cache-run/sequence-runner",
+      "--model",
+      "${GEMMA_MODEL}",
+      "--controls",
+      "${TEMP_DIR}/planner-cache-run/controls.f32",
+      "--values",
+      "${TEMP_DIR}/planner-cache-run/values.txt",
+      "--token-ids",
+      "${TEMP_DIR}/planner-cache-run/token-ids.csv",
+      "--prompt",
+      "The stored current value is",
+      "--layer",
+      "41",
+      "--gpu-layers",
+      "12",
+      "--strength",
+      "8.0"
+    ],
+    "conditions": [
+      {
+        "category": "name",
+        "control_disabled_after_complete": true,
+        "first_token_correct": true,
+        "full_string_correct": true,
+        "generated_text": " Alice",
+        "generated_token_ids": [
+          32858
+        ],
+        "latency_ms": 1470.32,
+        "max_abs_logit_difference_from_base": 31.3361,
+        "mean_applied_residual_norm": 8,
+        "mean_kl_from_base": 8.20398,
+        "mean_target_logit_lift": 20.5831,
+        "post_sequence_kl_from_base": 0,
+        "post_sequence_max_abs_logit_difference": 0,
+        "target_token_count": 1,
+        "target_token_ids": [
+          32858
+        ],
+        "tokens_emitted": 1,
+        "value": "Alice"
+      },
+      {
+        "category": "name",
+        "control_disabled_after_complete": true,
+        "first_token_correct": true,
+        "full_string_correct": true,
+        "generated_text": " Nathra",
+        "generated_token_ids": [
+          80081,
+          601
+        ],
+        "latency_ms": 1140.5,
+        "max_abs_logit_difference_from_base": 28.6154,
+        "mean_applied_residual_norm": 8,
+        "mean_kl_from_base": 10.1701,
+        "mean_target_logit_lift": 22.0761,
+        "post_sequence_kl_from_base": 0,
+        "post_sequence_max_abs_logit_difference": 0,
+        "target_token_count": 2,
+        "target_token_ids": [
+          80081,
+          601
+        ],
+        "tokens_emitted": 2,
+        "value": "Nathra"
+      },
+      {
+        "category": "nonsense",
+        "control_disabled_after_complete": true,
+        "first_token_correct": true,
+        "full_string_correct": true,
+        "generated_text": " Zerpanox",
+        "generated_token_ids": [
+          74979,
+          3842,
+          1169
+        ],
+        "latency_ms": 1537.92,
+        "max_abs_logit_difference_from_base": 33.6241,
+        "mean_applied_residual_norm": 8,
+        "mean_kl_from_base": 12.2984,
+        "mean_target_logit_lift": 22.8488,
+        "post_sequence_kl_from_base": 0,
+        "post_sequence_max_abs_logit_difference": 0,
+        "target_token_count": 3,
+        "target_token_ids": [
+          74979,
+          3842,
+          1169
+        ],
+        "tokens_emitted": 3,
+        "value": "Zerpanox"
+      },
+      {
+        "category": "location",
+        "control_disabled_after_complete": true,
+        "first_token_correct": true,
+        "full_string_correct": true,
+        "generated_text": " workshop",
+        "generated_token_ids": [
+          18669
+        ],
+        "latency_ms": 949.822,
+        "max_abs_logit_difference_from_base": 38.1725,
+        "mean_applied_residual_norm": 8,
+        "mean_kl_from_base": 13.2713,
+        "mean_target_logit_lift": 29.8305,
+        "post_sequence_kl_from_base": 0,
+        "post_sequence_max_abs_logit_difference": 0,
+        "target_token_count": 1,
+        "target_token_ids": [
+          18669
+        ],
+        "tokens_emitted": 1,
+        "value": "workshop"
+      },
+      {
+        "category": "location",
+        "control_disabled_after_complete": true,
+        "first_token_correct": true,
+        "full_string_correct": true,
+        "generated_text": " north hallway",
+        "generated_token_ids": [
+          8339,
+          65537
+        ],
+        "latency_ms": 1430.6,
+        "max_abs_logit_difference_from_base": 33.5286,
+        "mean_applied_residual_norm": 8,
+        "mean_kl_from_base": 13.5839,
+        "mean_target_logit_lift": 24.3975,
+        "post_sequence_kl_from_base": 0,
+        "post_sequence_max_abs_logit_difference": 0,
+        "target_token_count": 2,
+        "target_token_ids": [
+          8339,
+          65537
+        ],
+        "tokens_emitted": 2,
+        "value": "north hallway"
+      },
+      {
+        "category": "object",
+        "control_disabled_after_complete": true,
+        "first_token_correct": true,
+        "full_string_correct": true,
+        "generated_text": " dark oak desk",
+        "generated_token_ids": [
+          4996,
+          32049,
+          15348
+        ],
+        "latency_ms": 1771.04,
+        "max_abs_logit_difference_from_base": 34.6592,
+        "mean_applied_residual_norm": 8,
+        "mean_kl_from_base": 11.5043,
+        "mean_target_logit_lift": 19.611,
+        "post_sequence_kl_from_base": 0,
+        "post_sequence_max_abs_logit_difference": 0,
+        "target_token_count": 3,
+        "target_token_ids": [
+          4996,
+          32049,
+          15348
+        ],
+        "tokens_emitted": 3,
+        "value": "dark oak desk"
+      },
+      {
+        "category": "status",
+        "control_disabled_after_complete": true,
+        "first_token_correct": true,
+        "full_string_correct": true,
+        "generated_text": " offline",
+        "generated_token_ids": [
+          35726
+        ],
+        "latency_ms": 970.706,
+        "max_abs_logit_difference_from_base": 31.1027,
+        "mean_applied_residual_norm": 8,
+        "mean_kl_from_base": 12.0068,
+        "mean_target_logit_lift": 18.2934,
+        "post_sequence_kl_from_base": 0,
+        "post_sequence_max_abs_logit_difference": 0,
+        "target_token_count": 1,
+        "target_token_ids": [
+          35726
+        ],
+        "tokens_emitted": 1,
+        "value": "offline"
+      },
+      {
+        "category": "status",
+        "control_disabled_after_complete": true,
+        "first_token_correct": true,
+        "full_string_correct": true,
+        "generated_text": " currently unavailable",
+        "generated_token_ids": [
+          5633,
+          47713
+        ],
+        "latency_ms": 1335.84,
+        "max_abs_logit_difference_from_base": 33.7015,
+        "mean_applied_residual_norm": 8,
+        "mean_kl_from_base": 7.86047,
+        "mean_target_logit_lift": 9.65105,
+        "post_sequence_kl_from_base": 0,
+        "post_sequence_max_abs_logit_difference": 0,
+        "target_token_count": 2,
+        "target_token_ids": [
+          5633,
+          47713
+        ],
+        "tokens_emitted": 2,
+        "value": "currently unavailable"
+      },
+      {
+        "category": "number",
+        "control_disabled_after_complete": true,
+        "first_token_correct": true,
+        "full_string_correct": true,
+        "generated_text": " 7319",
+        "generated_token_ids": [
+          236743,
+          236832,
+          236800,
+          236770,
+          236819
+        ],
+        "latency_ms": 2479.74,
+        "max_abs_logit_difference_from_base": 24.3974,
+        "mean_applied_residual_norm": 8,
+        "mean_kl_from_base": 4.06882,
+        "mean_target_logit_lift": 10.2131,
+        "post_sequence_kl_from_base": 0,
+        "post_sequence_max_abs_logit_difference": 0,
+        "target_token_count": 5,
+        "target_token_ids": [
+          236743,
+          236832,
+          236800,
+          236770,
+          236819
+        ],
+        "tokens_emitted": 5,
+        "value": "7319"
+      },
+      {
+        "category": "number",
+        "control_disabled_after_complete": true,
+        "first_token_correct": true,
+        "full_string_correct": true,
+        "generated_text": " Room-7281",
+        "generated_token_ids": [
+          18120,
+          236772,
+          236832,
+          236778,
+          236828,
+          236770
+        ],
+        "latency_ms": 2921.59,
+        "max_abs_logit_difference_from_base": 32.1378,
+        "mean_applied_residual_norm": 8,
+        "mean_kl_from_base": 5.15062,
+        "mean_target_logit_lift": 10.7852,
+        "post_sequence_kl_from_base": 0,
+        "post_sequence_max_abs_logit_difference": 0,
+        "target_token_count": 6,
+        "target_token_ids": [
+          18120,
+          236772,
+          236832,
+          236778,
+          236828,
+          236770
+        ],
+        "tokens_emitted": 6,
+        "value": "Room-7281"
+      },
+      {
+        "category": "utf8",
+        "control_disabled_after_complete": true,
+        "first_token_correct": true,
+        "full_string_correct": true,
+        "generated_text": " İzmir",
+        "generated_token_ids": [
+          192929
+        ],
+        "latency_ms": 980.765,
+        "max_abs_logit_difference_from_base": 25.5119,
+        "mean_applied_residual_norm": 8,
+        "mean_kl_from_base": 11.9923,
+        "mean_target_logit_lift": 24.5122,
+        "post_sequence_kl_from_base": 0,
+        "post_sequence_max_abs_logit_difference": 0,
+        "target_token_count": 1,
+        "target_token_ids": [
+          192929
+        ],
+        "tokens_emitted": 1,
+        "value": "İzmir"
+      },
+      {
+        "category": "utf8",
+        "control_disabled_after_complete": true,
+        "first_token_correct": true,
+        "full_string_correct": true,
+        "generated_text": " 東京駅",
+        "generated_token_ids": [
+          86459,
+          239792
+        ],
+        "latency_ms": 1317.49,
+        "max_abs_logit_difference_from_base": 33.4446,
+        "mean_applied_residual_norm": 8,
+        "mean_kl_from_base": 12.0314,
+        "mean_target_logit_lift": 19.9343,
+        "post_sequence_kl_from_base": 0,
+        "post_sequence_max_abs_logit_difference": 0,
+        "target_token_count": 2,
+        "target_token_ids": [
+          86459,
+          239792
+        ],
+        "tokens_emitted": 2,
+        "value": "東京駅"
+      },
+      {
+        "category": "utf8",
+        "control_disabled_after_complete": true,
+        "first_token_correct": true,
+        "full_string_correct": true,
+        "generated_text": " مرحبا",
+        "generated_token_ids": [
+          150423
+        ],
+        "latency_ms": 938.193,
+        "max_abs_logit_difference_from_base": 31.6894,
+        "mean_applied_residual_norm": 8,
+        "mean_kl_from_base": 19.3406,
+        "mean_target_logit_lift": 31.6894,
+        "post_sequence_kl_from_base": 0,
+        "post_sequence_max_abs_logit_difference": 0,
+        "target_token_count": 1,
+        "target_token_ids": [
+          150423
+        ],
+        "tokens_emitted": 1,
+        "value": "مرحبا"
+      }
+    ],
+    "control_strength": 8,
+    "extra_prompt_tokens": 0,
+    "format": "planner-cache-sequence-causal-eval-v1",
+    "model_hidden_width": 2560,
+    "model_layer_count": 42,
+    "prompt_token_count": 6,
+    "source_state_in_prompt": false,
+    "vocabulary_size": 262144,
+    "wall_clock_seconds": 25.805593285011128
+  },
+  "adapter": "${REPOSITORY_ROOT}/artifacts/gemma4-e4b-q8-sequence-causal.translate",
+  "adapter_parameter_count": 1,
+  "adapter_sha256": "10b9cc2e3e55b1069886f52da84840b7e291f69c93218bea37ac8beaa4efae28",
+  "adapter_size_bytes": 1332,
+  "base_model_frozen": true,
+  "by_category": {
+    "location": {
+      "all_controls_disabled_after_complete": true,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 1.0,
+      "mean_kl_from_base": 13.4276,
+      "mean_latency_ms": 1190.211,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 1.0,
+      "value_count": 2
+    },
+    "name": {
+      "all_controls_disabled_after_complete": true,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 1.0,
+      "mean_kl_from_base": 9.18704,
+      "mean_latency_ms": 1305.4099999999999,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 1.0,
+      "value_count": 2
+    },
+    "nonsense": {
+      "all_controls_disabled_after_complete": true,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 1.0,
+      "mean_kl_from_base": 12.2984,
+      "mean_latency_ms": 1537.92,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 1.0,
+      "value_count": 1
+    },
+    "number": {
+      "all_controls_disabled_after_complete": true,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 1.0,
+      "mean_kl_from_base": 4.609719999999999,
+      "mean_latency_ms": 2700.665,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 1.0,
+      "value_count": 2
+    },
+    "object": {
+      "all_controls_disabled_after_complete": true,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 1.0,
+      "mean_kl_from_base": 11.5043,
+      "mean_latency_ms": 1771.04,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 1.0,
+      "value_count": 1
+    },
+    "status": {
+      "all_controls_disabled_after_complete": true,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 1.0,
+      "mean_kl_from_base": 9.933635,
+      "mean_latency_ms": 1153.273,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 1.0,
+      "value_count": 2
+    },
+    "utf8": {
+      "all_controls_disabled_after_complete": true,
+      "first_token_accuracy": 1.0,
+      "full_string_accuracy": 1.0,
+      "mean_kl_from_base": 14.454766666666666,
+      "mean_latency_ms": 1078.816,
+      "mean_residual_norm": 8.0,
+      "multi_token_full_string_accuracy": 1.0,
+      "value_count": 3
+    }
+  },
+  "canonical_p_unchanged": true,
+  "compatibility_artifact": "${REPOSITORY_ROOT}/artifacts/gemma4-tokenizer-compatibility.json",
+  "compile_command": [
+    "c++",
+    "-std=c++17",
+    "-O2",
+    "${REPOSITORY_ROOT}/benchmarks/llama_cpp_sequence_runner.cpp",
+    "-I${LOCAL_PATH}",
+    "-I${LOCAL_PATH}",
+    "${LOCAL_PATH}",
+    "${LOCAL_PATH}",
+    "-Wl,-rpath,${LOCAL_PATH}",
+    "-o",
+    "${TEMP_DIR}/planner-cache-run/sequence-runner"
+  ],
+  "control_advance_policy": "advance only after exact target token, disable on mismatch or completion",
+  "extra_prompt_tokens": 0,
+  "format": "planner-cache-gemma-sequence-translate-benchmark-v1",
+  "inactive": {
+    "attachment_layer": 41,
+    "command": [
+      "${TEMP_DIR}/planner-cache-run/sequence-runner",
+      "--model",
+      "${GEMMA_MODEL}",
+      "--controls",
+      "${TEMP_DIR}/planner-cache-run/controls.f32",
+      "--values",
+      "${TEMP_DIR}/planner-cache-run/values.txt",
+      "--token-ids",
+      "${TEMP_DIR}/planner-cache-run/token-ids.csv",
+      "--prompt",
+      "The stored current value is",
+      "--layer",
+      "41",
+      "--gpu-layers",
+      "12",
+      "--strength",
+      "0.0"
+    ],
+    "conditions": [
+      {
+        "control_disabled_after_complete": false,
+        "first_token_correct": false,
+        "full_string_correct": false,
+        "generated_text": " $",
+        "generated_token_ids": [
+          609
+        ],
+        "latency_ms": 528.843,
+        "max_abs_logit_difference_from_base": 0,
+        "mean_applied_residual_norm": 0,
+        "mean_kl_from_base": 0,
+        "mean_target_logit_lift": 0,
+        "post_sequence_kl_from_base": -1,
+        "post_sequence_max_abs_logit_difference": -1,
+        "target_token_count": 1,
+        "target_token_ids": [
+          32858
+        ],
+        "tokens_emitted": 1,
+        "value": "Alice"
+      },
+      {
+        "control_disabled_after_complete": false,
+        "first_token_correct": false,
+        "full_string_correct": false,
+        "generated_text": " $",
+        "generated_token_ids": [
+          609
+        ],
+        "latency_ms": 450.934,
+        "max_abs_logit_difference_from_base": 0,
+        "mean_applied_residual_norm": 0,
+        "mean_kl_from_base": 0,
+        "mean_target_logit_lift": 0,
+        "post_sequence_kl_from_base": -1,
+        "post_sequence_max_abs_logit_difference": -1,
+        "target_token_count": 2,
+        "target_token_ids": [
+          80081,
+          601
+        ],
+        "tokens_emitted": 1,
+        "value": "Nathra"
+      },
+      {
+        "control_disabled_after_complete": false,
+        "first_token_correct": false,
+        "full_string_correct": false,
+        "generated_text": " $",
+        "generated_token_ids": [
+          609
+        ],
+        "latency_ms": 437.435,
+        "max_abs_logit_difference_from_base": 0,
+        "mean_applied_residual_norm": 0,
+        "mean_kl_from_base": 0,
+        "mean_target_logit_lift": 0,
+        "post_sequence_kl_from_base": -1,
+        "post_sequence_max_abs_logit_difference": -1,
+        "target_token_count": 3,
+        "target_token_ids": [
+          74979,
+          3842,
+          1169
+        ],
+        "tokens_emitted": 1,
+        "value": "Zerpanox"
+      },
+      {
+        "control_disabled_after_complete": false,
+        "first_token_correct": false,
+        "full_string_correct": false,
+        "generated_text": " $",
+        "generated_token_ids": [
+          609
+        ],
+        "latency_ms": 476.281,
+        "max_abs_logit_difference_from_base": 0,
+        "mean_applied_residual_norm": 0,
+        "mean_kl_from_base": 0,
+        "mean_target_logit_lift": 0,
+        "post_sequence_kl_from_base": -1,
+        "post_sequence_max_abs_logit_difference": -1,
+        "target_token_count": 1,
+        "target_token_ids": [
+          18669
+        ],
+        "tokens_emitted": 1,
+        "value": "workshop"
+      },
+      {
+        "control_disabled_after_complete": false,
+        "first_token_correct": false,
+        "full_string_correct": false,
+        "generated_text": " $",
+        "generated_token_ids": [
+          609
+        ],
+        "latency_ms": 490.37,
+        "max_abs_logit_difference_from_base": 0,
+        "mean_applied_residual_norm": 0,
+        "mean_kl_from_base": 0,
+        "mean_target_logit_lift": 0,
+        "post_sequence_kl_from_base": -1,
+        "post_sequence_max_abs_logit_difference": -1,
+        "target_token_count": 2,
+        "target_token_ids": [
+          8339,
+          65537
+        ],
+        "tokens_emitted": 1,
+        "value": "north hallway"
+      },
+      {
+        "control_disabled_after_complete": false,
+        "first_token_correct": false,
+        "full_string_correct": false,
+        "generated_text": " $",
+        "generated_token_ids": [
+          609
+        ],
+        "latency_ms": 515.417,
+        "max_abs_logit_difference_from_base": 0,
+        "mean_applied_residual_norm": 0,
+        "mean_kl_from_base": 0,
+        "mean_target_logit_lift": 0,
+        "post_sequence_kl_from_base": -1,
+        "post_sequence_max_abs_logit_difference": -1,
+        "target_token_count": 3,
+        "target_token_ids": [
+          4996,
+          32049,
+          15348
+        ],
+        "tokens_emitted": 1,
+        "value": "dark oak desk"
+      },
+      {
+        "control_disabled_after_complete": false,
+        "first_token_correct": false,
+        "full_string_correct": false,
+        "generated_text": " $",
+        "generated_token_ids": [
+          609
+        ],
+        "latency_ms": 546.276,
+        "max_abs_logit_difference_from_base": 0,
+        "mean_applied_residual_norm": 0,
+        "mean_kl_from_base": 0,
+        "mean_target_logit_lift": 0,
+        "post_sequence_kl_from_base": -1,
+        "post_sequence_max_abs_logit_difference": -1,
+        "target_token_count": 1,
+        "target_token_ids": [
+          35726
+        ],
+        "tokens_emitted": 1,
+        "value": "offline"
+      },
+      {
+        "control_disabled_after_complete": false,
+        "first_token_correct": false,
+        "full_string_correct": false,
+        "generated_text": " $",
+        "generated_token_ids": [
+          609
+        ],
+        "latency_ms": 516.878,
+        "max_abs_logit_difference_from_base": 0,
+        "mean_applied_residual_norm": 0,
+        "mean_kl_from_base": 0,
+        "mean_target_logit_lift": 0,
+        "post_sequence_kl_from_base": -1,
+        "post_sequence_max_abs_logit_difference": -1,
+        "target_token_count": 2,
+        "target_token_ids": [
+          5633,
+          47713
+        ],
+        "tokens_emitted": 1,
+        "value": "currently unavailable"
+      },
+      {
+        "control_disabled_after_complete": false,
+        "first_token_correct": false,
+        "full_string_correct": false,
+        "generated_text": " $",
+        "generated_token_ids": [
+          609
+        ],
+        "latency_ms": 526.682,
+        "max_abs_logit_difference_from_base": 0,
+        "mean_applied_residual_norm": 0,
+        "mean_kl_from_base": 0,
+        "mean_target_logit_lift": 0,
+        "post_sequence_kl_from_base": -1,
+        "post_sequence_max_abs_logit_difference": -1,
+        "target_token_count": 5,
+        "target_token_ids": [
+          236743,
+          236832,
+          236800,
+          236770,
+          236819
+        ],
+        "tokens_emitted": 1,
+        "value": "7319"
+      },
+      {
+        "control_disabled_after_complete": false,
+        "first_token_correct": false,
+        "full_string_correct": false,
+        "generated_text": " $",
+        "generated_token_ids": [
+          609
+        ],
+        "latency_ms": 544.013,
+        "max_abs_logit_difference_from_base": 0,
+        "mean_applied_residual_norm": 0,
+        "mean_kl_from_base": 0,
+        "mean_target_logit_lift": 0,
+        "post_sequence_kl_from_base": -1,
+        "post_sequence_max_abs_logit_difference": -1,
+        "target_token_count": 6,
+        "target_token_ids": [
+          18120,
+          236772,
+          236832,
+          236778,
+          236828,
+          236770
+        ],
+        "tokens_emitted": 1,
+        "value": "Room-7281"
+      },
+      {
+        "control_disabled_after_complete": false,
+        "first_token_correct": false,
+        "full_string_correct": false,
+        "generated_text": " $",
+        "generated_token_ids": [
+          609
+        ],
+        "latency_ms": 544.006,
+        "max_abs_logit_difference_from_base": 0,
+        "mean_applied_residual_norm": 0,
+        "mean_kl_from_base": 0,
+        "mean_target_logit_lift": 0,
+        "post_sequence_kl_from_base": -1,
+        "post_sequence_max_abs_logit_difference": -1,
+        "target_token_count": 1,
+        "target_token_ids": [
+          192929
+        ],
+        "tokens_emitted": 1,
+        "value": "İzmir"
+      },
+      {
+        "control_disabled_after_complete": false,
+        "first_token_correct": false,
+        "full_string_correct": false,
+        "generated_text": " $",
+        "generated_token_ids": [
+          609
+        ],
+        "latency_ms": 557.099,
+        "max_abs_logit_difference_from_base": 0,
+        "mean_applied_residual_norm": 0,
+        "mean_kl_from_base": 0,
+        "mean_target_logit_lift": 0,
+        "post_sequence_kl_from_base": -1,
+        "post_sequence_max_abs_logit_difference": -1,
+        "target_token_count": 2,
+        "target_token_ids": [
+          86459,
+          239792
+        ],
+        "tokens_emitted": 1,
+        "value": "東京駅"
+      },
+      {
+        "control_disabled_after_complete": false,
+        "first_token_correct": false,
+        "full_string_correct": false,
+        "generated_text": " $",
+        "generated_token_ids": [
+          609
+        ],
+        "latency_ms": 555.645,
+        "max_abs_logit_difference_from_base": 0,
+        "mean_applied_residual_norm": 0,
+        "mean_kl_from_base": 0,
+        "mean_target_logit_lift": 0,
+        "post_sequence_kl_from_base": -1,
+        "post_sequence_max_abs_logit_difference": -1,
+        "target_token_count": 1,
+        "target_token_ids": [
+          150423
+        ],
+        "tokens_emitted": 1,
+        "value": "مرحبا"
+      }
+    ],
+    "control_strength": 0,
+    "extra_prompt_tokens": 0,
+    "format": "planner-cache-sequence-causal-eval-v1",
+    "model_hidden_width": 2560,
+    "model_layer_count": 42,
+    "prompt_token_count": 6,
+    "source_state_in_prompt": false,
+    "vocabulary_size": 262144,
+    "wall_clock_seconds": 16.60308209399227
+  },
+  "inactive_path": {
+    "conditions": [
+      "wrong_entity",
+      "wrong_relation",
+      "historical",
+      "invalidated",
+      "router_disabled",
+      "translator_disabled",
+      "irrelevant_rp"
+    ],
+    "implementation": "no translation is constructed and llama control vector is disabled",
+    "max_abs_logit_difference_from_base": 0,
+    "rp_preservation": "exact frozen-base logits when no route is accepted"
+  },
+  "model": "${GEMMA_MODEL}",
+  "model_sha256": "a4c4177f9fd7e3f56522675afb742f079a53f9226195b7db5e9888c872f053da",
+  "prompt": "The stored current value is",
+  "source_state_in_prompt": false,
+  "split": {
+    "complete_value_overlap_count": 0,
+    "evaluation_complete_value_count": 13,
+    "note": "The prototype has no learned complete-value table. Every evaluated string is held out from adapter fitting.",
+    "training_complete_value_count": 0
+  },
+  "summary": {
+    "all_controls_disabled_after_complete": true,
+    "first_token_accuracy": 1.0,
+    "full_string_accuracy": 1.0,
+    "mean_kl_from_base": 10.883306923076923,
+    "mean_latency_ms": 1480.3481538461538,
+    "mean_residual_norm": 8.0,
+    "multi_token_full_string_accuracy": 1.0,
+    "value_count": 13
+  },
+  "tokenizer_bundle": "${REPOSITORY_ROOT}/Gemma-4-E4B",
+  "tokenizer_bundle_sha256": "d26e632e6c55c72be7fe0803e4cd9f6d8ea03bb2dd8e52c61774e7987c2d9edf",
+  "universal_router_unchanged": true
+}

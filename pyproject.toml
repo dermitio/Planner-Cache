@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "planner-cache"
+version = "0.1.0"
+description = "Canonical Planner Cache, compatibility layers, and durable personality packages"
+requires-python = ">=3.11"
+dependencies = [
+  "accelerate>=1.12",
+  "numpy>=2.0",
+  "safetensors>=0.5",
+  "torch>=2.7",
+  "transformers>=5.15",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=9"]
+publishing = ["cairosvg>=2.7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+markers = [
+  "slow_cuda: exact CUDA integration regressions using production-scale models",
+]

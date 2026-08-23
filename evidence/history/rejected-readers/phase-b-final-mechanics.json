@@ -1,0 +1,18 @@
+{
+  "candidate_states": 1024,
+  "importance_capacity_sweep": {
+    "64": {"p": {"critical": 0.5, "useful": 0.0, "irrelevant": 0.0, "allocated_bytes": 66880, "allocation_stable": true}, "rolling_summary": {"critical": 0.0859375, "useful": 0.049479166666666664, "irrelevant": 0.06640625}},
+    "128": {"p": {"critical": 1.0, "useful": 0.0, "irrelevant": 0.0, "allocated_bytes": 133760, "allocation_stable": true}, "rolling_summary": {"critical": 0.1171875, "useful": 0.10416666666666667, "irrelevant": 0.142578125}},
+    "256": {"p": {"critical": 1.0, "useful": 0.3333333333333333, "irrelevant": 0.0, "allocated_bytes": 267520, "allocation_stable": true}, "rolling_summary": {"critical": 0.2578125, "useful": 0.23177083333333334, "irrelevant": 0.26171875}},
+    "512": {"p": {"critical": 1.0, "useful": 1.0, "irrelevant": 0.0, "allocated_bytes": 535040, "allocation_stable": true}, "rolling_summary": {"critical": 0.5234375, "useful": 0.4817708333333333, "irrelevant": 0.5078125}}
+  },
+  "equal_budget_baselines": {
+    "recent_kv_only": {"current_state_accuracy": 0.0, "mutation_accuracy": 0.0, "invalidation_accuracy": 1.0, "incremental_gpu_bytes": 0, "extra_tokens": 0, "search_operations": 0},
+    "p_cache_128": {"current_state_accuracy": 0.19965576592082615, "mutation_accuracy": 1.0, "invalidation_accuracy": 1.0, "incremental_gpu_bytes": 133760, "extra_tokens": 0, "search_operations": 0},
+    "rolling_summary_128": {"current_state_accuracy": 0.19965576592082615, "mutation_accuracy": 1.0, "invalidation_accuracy": 1.0, "incremental_gpu_bytes": 182452224, "extra_tokens": 928, "search_operations": 0},
+    "archive_retrieval": {"current_state_accuracy": 1.0, "mutation_accuracy": 1.0, "invalidation_accuracy": 1.0, "transient_gpu_bytes_peak": 1572864, "extra_tokens": 6048, "search_operations": 756}
+  },
+  "mutation_chain": {"latest_only_after_eviction": true, "historical_versions_retained": 0, "invalidation_correct": true},
+  "semantic_merge": {"slots_before_equivalent": 1, "slots_after_equivalent": 1, "slots_after_unrelated": 2},
+  "gpu_accounting_note": "Incremental above common recent KV; summary assumes 8 tokens/fact and retrieval 8 tokens/search."
+}

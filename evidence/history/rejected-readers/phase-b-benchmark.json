@@ -1,0 +1,15 @@
+{
+  "baselines": {
+    "kv_only": {"active_accuracy": 0.0, "active_queries": 581, "invalidated_accuracy": 1.0, "resident_units": 32, "updated_accuracy": 0.0},
+    "p": {"active_accuracy": 0.19965576592082615, "active_queries": 581, "allocated_bytes": 133760, "invalidated_accuracy": 1.0, "resident_units": 128, "updated_accuracy": 1.0},
+    "retrieval": {"active_accuracy": 1.0, "active_queries": 581, "archive_searches": 756, "invalidated_accuracy": 1.0, "resident_units": 891, "updated_accuracy": 1.0},
+    "rolling_summary": {"active_accuracy": 0.19965576592082615, "active_queries": 581, "invalidated_accuracy": 1.0, "resident_units": 116, "updated_accuracy": 1.0}
+  },
+  "configuration": {"recent_events": 32, "states": 640, "summary_facts": 128, "width": 512},
+  "p_capacity_sweep": {
+    "64": {"active_accuracy": 0.09982788296041308, "active_queries": 581, "allocated_bytes": 66880, "invalidated_accuracy": 1.0, "resident_units": 64, "updated_accuracy": 0.5},
+    "128": {"active_accuracy": 0.19965576592082615, "active_queries": 581, "allocated_bytes": 133760, "invalidated_accuracy": 1.0, "resident_units": 128, "updated_accuracy": 1.0},
+    "256": {"active_accuracy": 0.3993115318416523, "active_queries": 581, "allocated_bytes": 267520, "invalidated_accuracy": 1.0, "resident_units": 256, "updated_accuracy": 1.0},
+    "512": {"active_accuracy": 0.8003442340791739, "active_queries": 581, "allocated_bytes": 535040, "invalidated_accuracy": 1.0, "resident_units": 512, "updated_accuracy": 1.0}
+  }
+}

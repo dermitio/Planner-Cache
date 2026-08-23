@@ -1,0 +1,29 @@
+{
+  "assertions": {
+    "inactive_ltl_has_no_output_control": true,
+    "message_structure_exact": true,
+    "rendered_prompt_exact": true,
+    "token_ids_exact": true
+  },
+  "conditions": {
+    "ltl_logit_bias_present": false,
+    "message_structure_equal": true,
+    "p_active": false
+  },
+  "format": "planner-cache-native-prompt-equivalence-v1",
+  "gateway_inactive": {
+    "message_sha256": "46f75bef337eb9fcb9cbebb77c8836fa48bc0c1c8de68d0ec1aa24631b912e4d",
+    "prompt_sha256": "0f9bac487f601d8f2c33c9097be424b7adc2813930f98993bd72c9f6ae03777b",
+    "token_count": 33,
+    "token_ids_sha256": "0ace5a54d9cc7305143599c4414212a1946494231473b590fad117e6105d5dcb"
+  },
+  "llama_cpp_version": "version: 10276 (6ea215d17)\nbuilt with GNU 16.1.1 for Linux x86_64",
+  "model": "${GEMMA_MODEL}",
+  "model_sha256": "a4c4177f9fd7e3f56522675afb742f079a53f9226195b7db5e9888c872f053da",
+  "raw": {
+    "message_sha256": "46f75bef337eb9fcb9cbebb77c8836fa48bc0c1c8de68d0ec1aa24631b912e4d",
+    "prompt_sha256": "0f9bac487f601d8f2c33c9097be424b7adc2813930f98993bd72c9f6ae03777b",
+    "token_count": 33,
+    "token_ids_sha256": "0ace5a54d9cc7305143599c4414212a1946494231473b590fad117e6105d5dcb"
+  }
+}

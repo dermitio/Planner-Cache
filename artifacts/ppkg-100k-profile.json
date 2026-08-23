@@ -1,0 +1,55 @@
+{
+  "after_reused_connection_per_query": {
+    "canonical_conversion_seconds": 0.0007130039994081017,
+    "checksum_work_seconds": 0.0,
+    "db_open_seconds": 0.0,
+    "model": "one validated open, then bounded queries on one reused connection",
+    "routing_header_query_seconds": 0.25507766800001264,
+    "row_hydration_seconds": 0.00020283000048948452,
+    "total_seconds": 0.2559935019999102
+  },
+  "before_legacy_per_query": {
+    "canonical_conversion_seconds": 0.0007130039994081017,
+    "checksum_work_seconds": 0.8436194509995403,
+    "db_open_seconds": 0.0003522689985402394,
+    "model": "validated open and whole-package checksum on every query",
+    "routing_header_query_seconds": 0.25507766800001264,
+    "row_hydration_seconds": 0.00020283000048948452,
+    "total_seconds": 1.0999652219979907
+  },
+  "build_and_initial_checkpoint_seconds": 2.8209503369980666,
+  "cold_integrity_boundary": {
+    "checksum_calls": 1,
+    "explicit_checksum_verify_seconds": 0.8436194509995403,
+    "unverified_db_open_seconds": 0.0003522689985402394
+  },
+  "connection": {
+    "connection_identity_stable": true,
+    "per_query_open_seconds": 0.0,
+    "reused": true
+  },
+  "entries": 100000,
+  "evidence_push": {
+    "checkpoint_checksum_calls": 1,
+    "checkpoint_seconds": 0.8296411900009844,
+    "legacy_modeled_push_seconds": 0.831370665004215,
+    "normal_push_checksum_calls": 0,
+    "normal_push_seconds": 0.0017294750032306183
+  },
+  "experiment": "ppkg-100k-integrity-boundary-profile-v1",
+  "modeled_speedup": 4.296848214523728,
+  "normal_query_checksum_calls": 0,
+  "package_size_bytes": 37863424,
+  "repeats": 7,
+  "selected": {
+    "entries_hydrated": 4,
+    "entry_ids": [
+      "personality-00000000",
+      "personality-00000403",
+      "personality-00000186",
+      "personality-00000124"
+    ],
+    "logical_entry_bytes": 2405
+  },
+  "sqlite_transactions_changed": false
+}

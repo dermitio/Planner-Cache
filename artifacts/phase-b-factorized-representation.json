@@ -1,0 +1,20 @@
+{
+  "representation": {
+    "layout": {"entity": 128, "relation": 128, "value": 128, "metadata": 128, "projected_slot_width": 512},
+    "training_loss": [7.440117835998535, 0.04114125296473503],
+    "train_combinations": 2073,
+    "held_out_combinations_total": 519,
+    "held_out_combinations_probed": 256,
+    "p_only_state_recovery": 0.97265625,
+    "permutation_stability": 1.0,
+    "permutations_per_combination": 8,
+    "canonical_decode_accuracy": {"entity": 1.0, "relation": 1.0, "value": 1.0, "metadata": 1.0},
+    "hard_negative_accuracy": {"wrong_value": 1.0, "wrong_entity": 0.97265625, "historical": 1.0}
+  },
+  "pythia": {
+    "shared": {"steps": 128, "held_out_combinations": 24, "hard_negative_slots_per_state": 3, "slot_order_randomized": true, "source_tokens_in_recent_kv": 0, "held_out_rp": true},
+    "final_cross_attention": {"training_loss": [10.956916809082031, 4.057961463928223], "held_out_composition_accuracy": 0.1666666716337204, "rp_language_loss_p_disabled": 5.733096599578857, "rp_language_loss_p_enabled": 11.490976333618164, "rp_kl_with_p_to_base": 7.918457984924316},
+    "upper_4_with_preservation": {"training_loss": [10.956916809082031, 4.487305641174316], "held_out_composition_accuracy": 0.0416666679084301, "rp_language_loss_p_disabled": 5.733096599578857, "rp_language_loss_p_enabled": 5.834649562835693, "rp_kl_with_p_to_base": 0.015018677338957787}
+  },
+  "diagnosis": "P-only representation passes; exact Pythia consumption/generalization remains the blocking interface."
+}

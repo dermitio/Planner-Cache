@@ -1,0 +1,245 @@
+{
+  "experiment": "planner-cache-debug-actions-profile-v1",
+  "page_limit": 100,
+  "personality": {
+    "100": {
+      "active_entries": 100,
+      "after_bounded": {
+        "action": {
+          "cpu_seconds": 0.009221641999999974,
+          "peak_python_allocation_bytes": 196984,
+          "wall_seconds": 0.009249514012481086
+        },
+        "hydrated_entries": 100,
+        "json_serialization": {
+          "cpu_seconds": 0.003703828000000353,
+          "peak_python_allocation_bytes": 121302,
+          "wall_seconds": 0.003694181010359898
+        },
+        "response_bytes": 60318,
+        "total_active": 100,
+        "truncated": false
+      },
+      "before_unbounded": {
+        "action": {
+          "cpu_seconds": 0.009142955000000175,
+          "peak_python_allocation_bytes": 196591,
+          "wall_seconds": 0.009165266004856676
+        },
+        "hydrated_entries": 100,
+        "json_serialization": {
+          "cpu_seconds": 0.003326453000000118,
+          "peak_python_allocation_bytes": 121106,
+          "wall_seconds": 0.003322666001622565
+        },
+        "response_bytes": 60220
+      }
+    },
+    "1000": {
+      "active_entries": 1000,
+      "after_bounded": {
+        "action": {
+          "cpu_seconds": 0.009862894999999927,
+          "peak_python_allocation_bytes": 196288,
+          "wall_seconds": 0.009891455003526062
+        },
+        "hydrated_entries": 100,
+        "json_serialization": {
+          "cpu_seconds": 0.003532476999999812,
+          "peak_python_allocation_bytes": 121302,
+          "wall_seconds": 0.0035344719944987446
+        },
+        "response_bytes": 60318,
+        "total_active": 1000,
+        "truncated": true
+      },
+      "before_unbounded": {
+        "action": {
+          "cpu_seconds": 0.09285407999999995,
+          "peak_python_allocation_bytes": 1928216,
+          "wall_seconds": 0.09317578599439003
+        },
+        "hydrated_entries": 1000,
+        "json_serialization": {
+          "cpu_seconds": 0.03305002400000001,
+          "peak_python_allocation_bytes": 1211130,
+          "wall_seconds": 0.033163794010761194
+        },
+        "response_bytes": 605232
+      }
+    },
+    "10000": {
+      "active_entries": 10000,
+      "after_bounded": {
+        "action": {
+          "cpu_seconds": 0.010486288000000066,
+          "peak_python_allocation_bytes": 196288,
+          "wall_seconds": 0.010522566008148715
+        },
+        "hydrated_entries": 100,
+        "json_serialization": {
+          "cpu_seconds": 0.003585478999999836,
+          "peak_python_allocation_bytes": 121304,
+          "wall_seconds": 0.00358573799894657
+        },
+        "response_bytes": 60319,
+        "total_active": 10000,
+        "truncated": true
+      },
+      "before_unbounded": {
+        "action": {
+          "cpu_seconds": 0.9330532409999996,
+          "peak_python_allocation_bytes": 17663949,
+          "wall_seconds": 0.9362227259989595
+        },
+        "hydrated_entries": 10000,
+        "json_serialization": {
+          "cpu_seconds": 0.34413546300000064,
+          "peak_python_allocation_bytes": 12161028,
+          "wall_seconds": 0.3450379890127806
+        },
+        "response_bytes": 6080181
+      }
+    },
+    "100000": {
+      "active_entries": 100000,
+      "after_bounded": {
+        "action": {
+          "cpu_seconds": 0.021668488999999624,
+          "peak_python_allocation_bytes": 196288,
+          "wall_seconds": 0.02177674999984447
+        },
+        "hydrated_entries": 100,
+        "json_serialization": {
+          "cpu_seconds": 0.0037721280000013735,
+          "peak_python_allocation_bytes": 121306,
+          "wall_seconds": 0.003769953007576987
+        },
+        "response_bytes": 60320,
+        "total_active": 100000,
+        "truncated": true
+      },
+      "before_unbounded": {
+        "action": {
+          "cpu_seconds": 9.748923195,
+          "peak_python_allocation_bytes": 173110748,
+          "wall_seconds": 9.787373771992861
+        },
+        "hydrated_entries": 100000,
+        "json_serialization": {
+          "cpu_seconds": 3.3711310019999985,
+          "peak_python_allocation_bytes": 122015586,
+          "wall_seconds": 3.384944927005563
+        },
+        "response_bytes": 61007460
+      }
+    }
+  },
+  "personality_query_plans": {
+    "active_count": [
+      "SEARCH entries USING COVERING INDEX entry_relationship_route (status=?)"
+    ],
+    "bounded_page": [
+      "SEARCH entries USING INDEX entry_relationship_route (status=?)",
+      "USE TEMP B-TREE FOR ORDER BY"
+    ]
+  },
+  "state": {
+    "0": {
+      "active_entries": 0,
+      "bounded_by_configured_capacity": true,
+      "configured_slots": 1,
+      "json_serialization": {
+        "cpu_seconds": 6.78270000000758e-05,
+        "peak_python_allocation_bytes": 1259,
+        "wall_seconds": 5.7437995565123856e-05
+      },
+      "response_bytes": 2,
+      "snapshot": {
+        "cpu_seconds": 0.00010548699999990419,
+        "peak_python_allocation_bytes": 432,
+        "wall_seconds": 8.957799582276493e-05
+      }
+    },
+    "1024": {
+      "active_entries": 1024,
+      "bounded_by_configured_capacity": true,
+      "configured_slots": 1024,
+      "json_serialization": {
+        "cpu_seconds": 0.030256003999999947,
+        "peak_python_allocation_bytes": 643302,
+        "wall_seconds": 0.030321376005304046
+      },
+      "response_bytes": 321318,
+      "snapshot": {
+        "cpu_seconds": 0.04200101300000014,
+        "peak_python_allocation_bytes": 716728,
+        "wall_seconds": 0.042143614002270624
+      }
+    },
+    "128": {
+      "active_entries": 128,
+      "bounded_by_configured_capacity": true,
+      "configured_slots": 128,
+      "json_serialization": {
+        "cpu_seconds": 0.0038881549999998377,
+        "peak_python_allocation_bytes": 80572,
+        "wall_seconds": 0.0038865509995957837
+      },
+      "response_bytes": 39953,
+      "snapshot": {
+        "cpu_seconds": 0.005286958999999758,
+        "peak_python_allocation_bytes": 86776,
+        "wall_seconds": 0.005294073998811655
+      }
+    },
+    "256": {
+      "active_entries": 256,
+      "bounded_by_configured_capacity": true,
+      "configured_slots": 256,
+      "json_serialization": {
+        "cpu_seconds": 0.0072936459999999315,
+        "peak_python_allocation_bytes": 160958,
+        "wall_seconds": 0.00729949600645341
+      },
+      "response_bytes": 80146,
+      "snapshot": {
+        "cpu_seconds": 0.010555682000000122,
+        "peak_python_allocation_bytes": 173272,
+        "wall_seconds": 0.010585684009129182
+      }
+    },
+    "512": {
+      "active_entries": 512,
+      "bounded_by_configured_capacity": true,
+      "configured_slots": 512,
+      "json_serialization": {
+        "cpu_seconds": 0.013979924000000032,
+        "peak_python_allocation_bytes": 321704,
+        "wall_seconds": 0.014006733996211551
+      },
+      "response_bytes": 160519,
+      "snapshot": {
+        "cpu_seconds": 0.021038871000000015,
+        "peak_python_allocation_bytes": 354200,
+        "wall_seconds": 0.02109747999929823
+      }
+    },
+    "64": {
+      "active_entries": 64,
+      "bounded_by_configured_capacity": true,
+      "configured_slots": 64,
+      "json_serialization": {
+        "cpu_seconds": 0.0018557219999997265,
+        "peak_python_allocation_bytes": 40532,
+        "wall_seconds": 0.0018496399861760437
+      },
+      "response_bytes": 19933,
+      "snapshot": {
+        "cpu_seconds": 0.0027572279999996674,
+        "peak_python_allocation_bytes": 43576,
+        "wall_seconds": 0.0027569780068006366
+      }
+    }
+  }
+}

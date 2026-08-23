@@ -1,0 +1,78 @@
+{
+  "bridge_only": {
+    "bridge_pretraining_loss": [12.557950973510742, 0.3700806796550751],
+    "canonical_to_model_value_accuracy": 1.0,
+    "final_hidden_to_canonical_query_cosine": 0.49115055799484253,
+    "final_relevance_accuracy_irrelevant_rp": 1.0,
+    "final_relevance_accuracy_state_queries": 1.0,
+    "generation_latency_seconds": 0.10692532140019466,
+    "generation_loss": [11.767891883850098, 9.47361946105957],
+    "hard_negative_accuracy": {
+      "historical": 1.0,
+      "wrong_entity": 1.0,
+      "wrong_value": 1.0
+    },
+    "held_out_state_generation_accuracy": 0.2083333432674408,
+    "lora_rank": 0,
+    "mode": "bridge_only",
+    "oracle_slot_assignments_evaluation": 0,
+    "p_disabled_state_generation_accuracy": 0.2083333432674408,
+    "p_only_bridge_retrieval_accuracy": 1.0,
+    "pretrain_hidden_to_canonical_query_cosine": 0.8522957563400269,
+    "pretrain_relevance_accuracy_irrelevant_rp": 1.0,
+    "pretrain_relevance_accuracy_state_queries": 1.0,
+    "rp_kl_with_p_to_base": -2.531811560402275e-08,
+    "rp_language_loss_p_disabled": 4.654686450958252,
+    "rp_language_loss_p_enabled": 4.655839443206787,
+    "trainable_parameters": 2365442
+  },
+  "bridge_plus_lora": {
+    "bridge_pretraining_loss": [12.557950973510742, 0.3700806796550751],
+    "canonical_to_model_value_accuracy": 1.0,
+    "final_hidden_to_canonical_query_cosine": 0.7129120826721191,
+    "final_relevance_accuracy_irrelevant_rp": 1.0,
+    "final_relevance_accuracy_state_queries": 1.0,
+    "generation_latency_seconds": 0.11243836740031839,
+    "generation_loss": [11.767891883850098, 3.605177402496338],
+    "hard_negative_accuracy": {
+      "historical": 1.0,
+      "wrong_entity": 1.0,
+      "wrong_value": 1.0
+    },
+    "held_out_state_generation_accuracy": 0.0,
+    "lora_rank": 4,
+    "mode": "bridge_plus_lora",
+    "oracle_slot_assignments_evaluation": 0,
+    "p_disabled_state_generation_accuracy": 0.0,
+    "p_only_bridge_retrieval_accuracy": 1.0,
+    "pretrain_hidden_to_canonical_query_cosine": 0.8522957563400269,
+    "pretrain_relevance_accuracy_irrelevant_rp": 1.0,
+    "pretrain_relevance_accuracy_state_queries": 1.0,
+    "rp_kl_with_p_to_base": 0.003118680790066719,
+    "rp_language_loss_p_disabled": 4.654686450958252,
+    "rp_language_loss_p_enabled": 5.467478275299072,
+    "trainable_parameters": 2422786
+  },
+  "canonical_p_probe": {
+    "canonical_decode_accuracy": {
+      "entity": 1.0,
+      "metadata": 1.0,
+      "relation": 1.0,
+      "value": 1.0
+    },
+    "hard_negative_accuracy": {
+      "historical": 1.0,
+      "wrong_entity": 0.97265625,
+      "wrong_value": 1.0
+    },
+    "held_out_combinations": 256,
+    "p_only_state_recovery": 0.97265625,
+    "permutation_stability": 1.0,
+    "permutations_per_combination": 8,
+    "slot_width": 512,
+    "total_held_out_combinations": 519,
+    "train_combinations": 2073,
+    "training_loss_first": 7.440117835998535,
+    "training_loss_last": 0.04114125296473503
+  }
+}

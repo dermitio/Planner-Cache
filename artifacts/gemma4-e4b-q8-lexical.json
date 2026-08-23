@@ -1,0 +1,175 @@
+{
+  "adapter": {
+    "config": {
+      "architecture": "utf8_byte_conv_low_rank_control_v1",
+      "attachment_layer": 41,
+      "byte_width": 64,
+      "canonical_protocol": "pcm-canonical-p-v1",
+      "canonical_width": 512,
+      "format": "pcm-lexical-control-translate-v1",
+      "lexical_encoder_version": "utf8-byte-conv-pool-v1",
+      "lexical_width": 256,
+      "model_architecture": "gemma4",
+      "model_hidden_width": 2560,
+      "model_id": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive",
+      "model_layer_count": 42,
+      "model_sha256": "a4c4177f9fd7e3f56522675afb742f079a53f9226195b7db5e9888c872f053da",
+      "projection_rank": 128,
+      "runtime": "llama.cpp-control-vector",
+      "runtime_version": "version: 10276 (6ea215d17)\nbuilt with GNU 16.1.1 for Linux x86_64",
+      "training_config_hash": "812b37544751af7fb31a038ce462beee40c493e9eebb6fe4cdbd800d60e26b2a",
+      "training_vocabulary_hash": "025c3f60b116e0ad91c522c549b42b2f5bcee921606aa858e30b786cf5b4079d"
+    },
+    "contains_base_weights": false,
+    "contains_optimizer_state": false,
+    "contains_vocabulary_table": false,
+    "parameter_count": 504706,
+    "path": "${REPOSITORY_ROOT}/artifacts/gemma4-e4b-q8-lexical.translate",
+    "sha256": "f1f753f8e6c6ee2fdb77227c08158caa894a60436359946f9d4067a6802d697f",
+    "size_bytes": 2021856
+  },
+  "boundary": "causal residual generation and open-vocabulary exact generation remain unevaluated",
+  "causal_evaluation": null,
+  "completion_gate_passed": false,
+  "evaluation": {
+    "categories": {
+      "locations": {
+        "examples": 160,
+        "mean_cosine": 0.6790156841278077,
+        "retrieval_accuracy": 0.13125,
+        "unrepresentable": 0
+      },
+      "multi_word": {
+        "examples": 160,
+        "mean_cosine": 0.6752067089080811,
+        "retrieval_accuracy": 0.0625,
+        "unrepresentable": 0
+      },
+      "numbers": {
+        "examples": 160,
+        "mean_cosine": 0.6591797471046448,
+        "retrieval_accuracy": 0.00625,
+        "unrepresentable": 0
+      },
+      "statuses": {
+        "examples": 160,
+        "mean_cosine": 0.6910960912704468,
+        "retrieval_accuracy": 0.0625,
+        "unrepresentable": 0
+      },
+      "synthetic": {
+        "examples": 160,
+        "mean_cosine": 0.7337693214416504,
+        "retrieval_accuracy": 0.00625,
+        "unrepresentable": 0
+      },
+      "unseen_names": {
+        "examples": 160,
+        "mean_cosine": 0.6460000991821289,
+        "retrieval_accuracy": 0.00625,
+        "unrepresentable": 0
+      },
+      "utf8": {
+        "examples": 160,
+        "mean_cosine": 0.7134092211723327,
+        "retrieval_accuracy": 0.025,
+        "unrepresentable": 0
+      }
+    },
+    "held_out_vocabulary": {
+      "examples": 4096,
+      "mean_cosine": 0.335134350694716,
+      "retrieval_accuracy": 0.45556640625
+    }
+  },
+  "experiment": "planner-cache-open-vocabulary-translate-v1",
+  "model": {
+    "base_model_requires_grad": false,
+    "base_modified": false,
+    "model_architecture": "gemma4",
+    "model_hidden_width": 2560,
+    "model_id": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive",
+    "model_layer_count": 42,
+    "path": "${GEMMA_MODEL}",
+    "runtime": "llama.cpp",
+    "sha256": "a4c4177f9fd7e3f56522675afb742f079a53f9226195b7db5e9888c872f053da",
+    "size_bytes": 8133226464,
+    "target_reason": "strongest vocabulary-wide model-native representation exposed by stock GGUF",
+    "target_tensor": "token_embd.weight",
+    "teacher": "llama-gguf-input-embedding-v1",
+    "usable_vocabulary_size": 255891,
+    "vocabulary_size": 262144
+  },
+  "runtime_seconds": 116.98681645799661,
+  "status": "alignment_complete_causal_not_run",
+  "training": {
+    "config": {
+      "batch_size": 256,
+      "byte_width": 64,
+      "composition_train_values": 8192,
+      "evaluation_values_per_category": 160,
+      "held_out_modulus": 10,
+      "learning_rate": 0.0003,
+      "lexical_width": 256,
+      "maximum_training_tokens": 0,
+      "projection_rank": 128,
+      "seed": 7421,
+      "stage1_epochs": 3,
+      "stage2_epochs": 3,
+      "stage3_epochs": 2,
+      "state_train_values": 2048,
+      "weight_decay": 0.0001
+    },
+    "full_vocabulary_enumerated": 262144,
+    "manifest": "${REPOSITORY_ROOT}/artifacts/gemma4-e4b-q8-lexical.split.json",
+    "manifest_sha256": "95ef51ebeeb6f47040a51a585c0e55947a093180fe7975f171e696b47148f57a",
+    "stages": {
+      "stage1_vocabulary": {
+        "epochs": 3,
+        "examples": 230048,
+        "loss_first": {
+          "contrastive_loss": 5.568172454833984,
+          "cosine_loss": 1.0004806518554688,
+          "loss": 1.557297945022583
+        },
+        "loss_last": {
+          "contrastive_loss": 2.652956247329712,
+          "cosine_loss": 0.6016849875450134,
+          "loss": 0.8669806122779846
+        },
+        "updates": 2697
+      },
+      "stage2_composition": {
+        "epochs": 3,
+        "examples": 8192,
+        "loss_first": {
+          "contrastive_loss": 5.099883079528809,
+          "cosine_loss": 0.6581588983535767,
+          "loss": 1.1681472063064575
+        },
+        "loss_last": {
+          "contrastive_loss": 4.285312175750732,
+          "cosine_loss": 0.4915394186973572,
+          "loss": 0.9200706481933594
+        },
+        "updates": 96
+      },
+      "stage3_state_values": {
+        "epochs": 2,
+        "examples": 2048,
+        "loss_first": {
+          "contrastive_loss": 5.068792343139648,
+          "cosine_loss": 0.5009624361991882,
+          "loss": 1.00784170627594
+        },
+        "loss_last": {
+          "contrastive_loss": 5.090028762817383,
+          "cosine_loss": 0.40135887265205383,
+          "loss": 0.9103617668151855
+        },
+        "updates": 16
+      }
+    },
+    "trained_token_count": 230048
+  }
+}

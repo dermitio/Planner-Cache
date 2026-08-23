@@ -1,0 +1,15 @@
+{
+  "benchmark": {"steps": 64, "seed": 43, "held_out_entities": 4, "held_out_candidate_values": 16, "base_rp_loss": 5.291333198547363, "source_tokens_in_recent_kv": 0, "preservation_rp_is_disjoint_from_evaluation_rp": true},
+  "variants": {
+    "final_cross_attention": {"layers": [23], "parameters": 2625537, "state_loss": [14.014729499816895, 5.747085094451904], "held_out_state_accuracy": 0.25, "rp_loss": 6.474777698516846, "rp_kl_with_p_to_base": 0.6575140953063965, "latency_seconds": 0.03416969179961597},
+    "upper_2_cross_attention": {"layers": [22, 23], "parameters": 5251074, "state_loss": [14.014729499816895, 6.5532026290893555], "held_out_state_accuracy": 0.25, "rp_loss": 6.030149459838867, "rp_kl_with_p_to_base": 0.5431621074676514, "latency_seconds": 0.03522163579982589},
+    "upper_4_cross_attention": {"layers": [20, 21, 22, 23], "parameters": 10502148, "state_loss": [14.014729499816895, 5.86234712600708], "held_out_state_accuracy": 0.25, "rp_loss": 5.284066677093506, "rp_kl_with_p_to_base": 0.007227130234241486, "latency_seconds": 0.03649321280026925},
+    "pooled_residual": {"layers": [23], "parameters": 1050113, "state_loss": [14.014729499816895, 5.669094562530518], "held_out_state_accuracy": 0.25, "rp_loss": 6.169881343841553, "rp_kl_with_p_to_base": 0.3961395025253296, "latency_seconds": 0.03513625619962113},
+    "per_token_gate": {"layers": [23], "parameters": 2631681, "state_loss": [14.014729499816895, 7.496232032775879], "held_out_state_accuracy": 0.25, "rp_loss": 7.3658528327941895, "rp_kl_with_p_to_base": 0.7570589184761047, "latency_seconds": 0.03610927039990201},
+    "reader_pretraining": {"layers": [23], "parameters": 2625537, "pretraining_loss": [1.0035438537597656, 0.7734787464141846], "state_loss": [13.801983833312988, 5.677089691162109], "held_out_state_accuracy": 0.25, "rp_loss": 6.385275363922119, "rp_kl_with_p_to_base": 0.3532131314277649, "latency_seconds": 0.03737781160016311},
+    "no_p_regularization": {"layers": [23], "parameters": 2625537, "state_loss": [14.436918258666992, 6.8114142417907715], "held_out_state_accuracy": 0.25, "rp_loss": 5.347194671630859, "rp_kl_with_p_to_base": 0.0038935821503400803, "latency_seconds": 0.037587748399528206},
+    "upper_4_with_preservation": {"layers": [20, 21, 22, 23], "parameters": 10502148, "state_loss": [14.436918258666992, 6.102531433105469], "held_out_state_accuracy": 0.25, "rp_loss": 5.292056083679199, "rp_kl_with_p_to_base": 0.0036284970119595528, "latency_seconds": 0.04204626759965322},
+    "per_token_gate_with_preservation": {"layers": [23], "parameters": 2631681, "state_loss": [14.436918258666992, 6.15318489074707], "held_out_state_accuracy": 0.25, "rp_loss": 5.291332244873047, "rp_kl_with_p_to_base": 4.109460860490799e-08, "latency_seconds": 0.039653771599842}
+  },
+  "decision": "No variant passes held-out state generalization. Keep final-layer cross-attention as baseline; upper-4 with preservation is the next training candidate, not an adopted replacement."
+}

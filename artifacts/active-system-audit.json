@@ -1,0 +1,979 @@
+{
+  "cache_router_profile": {
+    "1024": {
+      "context_query_cpu_seconds": 0.00026123900000030176,
+      "context_query_wall_seconds": 0.00026156400053878315,
+      "correct": true,
+      "fixed_allocation_bytes": 2151424,
+      "router_index_bytes": 541696,
+      "routing_cpu_seconds": 0.0001990224999999235,
+      "routing_wall_seconds": 0.0001980755005206447,
+      "selected_index": 1023,
+      "slot_hydration_cpu_seconds": 0.2316533870000006,
+      "slot_hydration_wall_seconds": 0.23300263999772142
+    },
+    "128": {
+      "context_query_cpu_seconds": 0.00026496599999958903,
+      "context_query_wall_seconds": 0.0002643149982759496,
+      "correct": true,
+      "fixed_allocation_bytes": 268928,
+      "router_index_bytes": 67712,
+      "routing_cpu_seconds": 0.00017257199999987094,
+      "routing_wall_seconds": 0.00017198149907926563,
+      "selected_index": 127,
+      "slot_hydration_cpu_seconds": 0.029635333999999958,
+      "slot_hydration_wall_seconds": 0.0301195789979829
+    },
+    "256": {
+      "context_query_cpu_seconds": 0.00026626349999947507,
+      "context_query_wall_seconds": 0.0002665029987838352,
+      "correct": true,
+      "fixed_allocation_bytes": 537856,
+      "router_index_bytes": 135424,
+      "routing_cpu_seconds": 0.0001784940000004731,
+      "routing_wall_seconds": 0.00017715650028549135,
+      "selected_index": 255,
+      "slot_hydration_cpu_seconds": 0.05884093700000026,
+      "slot_hydration_wall_seconds": 0.059160028999031056
+    },
+    "512": {
+      "context_query_cpu_seconds": 0.00026109349999980935,
+      "context_query_wall_seconds": 0.00026036700000986457,
+      "correct": true,
+      "fixed_allocation_bytes": 1075712,
+      "router_index_bytes": 270848,
+      "routing_cpu_seconds": 0.00018318249999982328,
+      "routing_wall_seconds": 0.0001824114988266956,
+      "selected_index": 511,
+      "slot_hydration_cpu_seconds": 0.11655074100000018,
+      "slot_hydration_wall_seconds": 0.1174167370008945
+    },
+    "64": {
+      "context_query_cpu_seconds": 0.000264374499999942,
+      "context_query_wall_seconds": 0.00026382900068711024,
+      "correct": true,
+      "fixed_allocation_bytes": 134464,
+      "router_index_bytes": 33856,
+      "routing_cpu_seconds": 0.00017868450000024794,
+      "routing_wall_seconds": 0.00017796800057112705,
+      "selected_index": 63,
+      "slot_hydration_cpu_seconds": 0.014785765000000062,
+      "slot_hydration_wall_seconds": 0.014910114001395414
+    }
+  },
+  "dependency_map": {
+    "active_module_imports": {
+      "__init__": [
+        "pcm.planner.cache",
+        "pcm.planner.canonical",
+        "pcm.planner.personality",
+        "pcm.planner.pythia_split_translate",
+        "pcm.planner.split_translator"
+      ],
+      "cache": [],
+      "canonical": [
+        "pcm.planner.cache"
+      ],
+      "personality": [
+        "pcm.planner.cache",
+        "pcm.planner.canonical",
+        "pcm.planner.representation",
+        "pcm.planner.split_translator"
+      ],
+      "personality_eval": [
+        "pcm.planner.canonical",
+        "pcm.planner.personality",
+        "pcm.planner.pythia_split_translate",
+        "pcm.planner.representation",
+        "pcm.planner.split_translator"
+      ],
+      "personality_profile": [
+        "pcm.planner.canonical",
+        "pcm.planner.personality",
+        "pcm.planner.representation"
+      ],
+      "pythia_split_translate": [
+        "pcm.planner.canonical",
+        "pcm.planner.split_translator"
+      ],
+      "representation": [],
+      "split_translator": [
+        "pcm.planner.cache",
+        "pcm.planner.canonical"
+      ],
+      "split_translator_eval": [
+        "pcm.planner.cache",
+        "pcm.planner.canonical",
+        "pcm.planner.pythia_split_translate",
+        "pcm.planner.representation",
+        "pcm.planner.split_translator"
+      ]
+    },
+    "archive_dependencies": [],
+    "canonical_stores_model_hidden_vectors": false,
+    "canonical_stores_model_token_ids": false
+  },
+  "experiment": "active-planner-cache-full-audit-v1",
+  "matched_e2e_evidence": {
+    "failure_attribution_fields": "storage validity, selected route/rank, acceptance, gate, candidate logits, generated token, KL, latency, VRAM",
+    "matched_cuda_attribution": {
+      "active_memory": {
+        "context_creative": {
+          "canonical_store_bytes": 1077,
+          "loaded_entries": 1,
+          "logical_disk_bytes_read": 990,
+          "package_disk_bytes": 57344
+        },
+        "context_technical": {
+          "canonical_store_bytes": 1077,
+          "loaded_entries": 1,
+          "logical_disk_bytes_read": 996,
+          "package_disk_bytes": 57344
+        },
+        "irrelevant": {
+          "canonical_store_bytes": 0,
+          "loaded_entries": 0,
+          "logical_disk_bytes_read": 0,
+          "package_disk_bytes": 57344
+        },
+        "low_confidence": {
+          "canonical_store_bytes": 0,
+          "loaded_entries": 0,
+          "logical_disk_bytes_read": 0,
+          "package_disk_bytes": 57344
+        },
+        "package_a": {
+          "canonical_store_bytes": 1077,
+          "loaded_entries": 1,
+          "logical_disk_bytes_read": 787,
+          "package_disk_bytes": 57344
+        },
+        "package_b": {
+          "canonical_store_bytes": 1077,
+          "loaded_entries": 1,
+          "logical_disk_bytes_read": 783,
+          "package_disk_bytes": 57344
+        }
+      },
+      "adapter_training_performed": false,
+      "base_model": "pythia-1.4b",
+      "base_parameters_with_grad": 0,
+      "base_training_performed": false,
+      "candidate_accuracy": {
+        "context_creative_bob": 1.0,
+        "context_technical_alice": 1.0,
+        "irrelevant_matches_base": 1.0,
+        "package_a_alice": 1.0,
+        "package_b_bob": 1.0
+      },
+      "canonical_probe": {
+        "canonical_decode_accuracy": {
+          "entity": 1.0,
+          "metadata": 1.0,
+          "relation": 1.0,
+          "value": 1.0
+        },
+        "hard_negative_accuracy": {
+          "historical": 1.0,
+          "wrong_entity": 0.97265625,
+          "wrong_value": 1.0
+        },
+        "held_out_combinations": 256,
+        "p_only_state_recovery": 0.97265625,
+        "permutation_stability": 1.0,
+        "permutations_per_combination": 8,
+        "slot_width": 512,
+        "total_held_out_combinations": 519,
+        "train_combinations": 2073,
+        "training_loss_first": 7.440117835998535,
+        "training_loss_last": 0.04114125296473503
+      },
+      "canonical_representation_reconstructed_from_fixed_existing_recipe": true,
+      "causal": {
+        "frozen_base": {
+          "active_state_vram_bytes": 0,
+          "alice_logit": 7.02734375,
+          "alice_probability": 0.00023412609880324453,
+          "bob_logit": 6.12109375,
+          "bob_probability": 9.459550346946344e-05,
+          "gate": 0.0,
+          "generated": " able",
+          "kl_from_base": -1.646096947638398e-08,
+          "router_accepted": false,
+          "router_score": null,
+          "selected_index": null,
+          "selected_state": null
+        },
+        "historical": {
+          "active_state_vram_bytes": 1077,
+          "alice_logit": 7.02734375,
+          "alice_probability": 0.00023412609880324453,
+          "bob_logit": 6.12109375,
+          "bob_probability": 9.459550346946344e-05,
+          "gate": 0.0,
+          "generated": " able",
+          "kl_from_base": -1.646096947638398e-08,
+          "router_accepted": false,
+          "router_score": 5.400981426239014,
+          "selected_index": 0,
+          "selected_state": "user"
+        },
+        "invalidated": {
+          "active_state_vram_bytes": 1077,
+          "alice_logit": 7.02734375,
+          "alice_probability": 0.00023412609880324453,
+          "bob_logit": 6.12109375,
+          "bob_probability": 9.459550346946344e-05,
+          "gate": 0.0,
+          "generated": " able",
+          "kl_from_base": -1.646096947638398e-08,
+          "router_accepted": false,
+          "router_score": null,
+          "selected_index": null,
+          "selected_state": null
+        },
+        "p_cache_only": {
+          "active_state_vram_bytes": 1077,
+          "alice_logit": 7.02734375,
+          "alice_probability": 0.00023412609880324453,
+          "bob_logit": 6.12109375,
+          "bob_probability": 9.459550346946344e-05,
+          "gate": 0.0,
+          "generated": " able",
+          "kl_from_base": -1.646096947638398e-08,
+          "router_accepted": false,
+          "router_score": -0.30040669441223145,
+          "selected_index": 0,
+          "selected_state": "current-task"
+        },
+        "p_cache_plus_p_package": {
+          "active_state_vram_bytes": 2154,
+          "alice_logit": 40.03125,
+          "alice_probability": 1.0,
+          "bob_logit": 13.859375,
+          "bob_probability": 4.302284223323127e-12,
+          "gate": 0.9909488558769226,
+          "generated": " Alice",
+          "kl_from_base": 8.359650611877441,
+          "router_accepted": true,
+          "router_score": 5.590433597564697,
+          "selected_index": 1,
+          "selected_state": "user"
+        },
+        "p_package_a_relevant": {
+          "active_state_vram_bytes": 1077,
+          "alice_logit": 40.03125,
+          "alice_probability": 1.0,
+          "bob_logit": 13.859375,
+          "bob_probability": 4.302284223323127e-12,
+          "gate": 0.9909488558769226,
+          "generated": " Alice",
+          "kl_from_base": 8.359650611877441,
+          "router_accepted": true,
+          "router_score": 5.590433597564697,
+          "selected_index": 0,
+          "selected_state": "user"
+        },
+        "p_package_b_relevant": {
+          "active_state_vram_bytes": 1077,
+          "alice_logit": 14.0,
+          "alice_probability": 8.776464277548968e-11,
+          "bob_logit": 37.15625,
+          "bob_probability": 0.9998875856399536,
+          "gate": 0.9605370163917542,
+          "generated": " Bob",
+          "kl_from_base": 9.265372276306152,
+          "router_accepted": true,
+          "router_score": 5.590433597564697,
+          "selected_index": 0,
+          "selected_state": "user"
+        },
+        "p_package_context_creative": {
+          "active_state_vram_bytes": 1077,
+          "alice_logit": 14.0,
+          "alice_probability": 8.776464277548968e-11,
+          "bob_logit": 37.15625,
+          "bob_probability": 0.9998875856399536,
+          "gate": 0.9605370163917542,
+          "generated": " Bob",
+          "kl_from_base": 9.265372276306152,
+          "router_accepted": true,
+          "router_score": 5.590433597564697,
+          "selected_index": 0,
+          "selected_state": "user"
+        },
+        "p_package_context_technical": {
+          "active_state_vram_bytes": 1077,
+          "alice_logit": 40.03125,
+          "alice_probability": 1.0,
+          "bob_logit": 13.859375,
+          "bob_probability": 4.302284223323127e-12,
+          "gate": 0.9909488558769226,
+          "generated": " Alice",
+          "kl_from_base": 8.359650611877441,
+          "router_accepted": true,
+          "router_score": 5.590433597564697,
+          "selected_index": 0,
+          "selected_state": "user"
+        },
+        "p_package_contradictory_low_confidence": {
+          "active_state_vram_bytes": 0,
+          "alice_logit": 7.02734375,
+          "alice_probability": 0.00023412609880324453,
+          "bob_logit": 6.12109375,
+          "bob_probability": 9.459550346946344e-05,
+          "gate": 0.0,
+          "generated": " able",
+          "kl_from_base": -1.646096947638398e-08,
+          "router_accepted": false,
+          "router_score": null,
+          "selected_index": null,
+          "selected_state": null
+        },
+        "p_package_irrelevant": {
+          "active_state_vram_bytes": 0,
+          "alice_logit": 7.02734375,
+          "alice_probability": 0.00023412609880324453,
+          "bob_logit": 6.12109375,
+          "bob_probability": 9.459550346946344e-05,
+          "gate": 0.0,
+          "generated": " able",
+          "kl_from_base": -1.646096947638398e-08,
+          "router_accepted": false,
+          "router_score": null,
+          "selected_index": null,
+          "selected_state": null
+        },
+        "router_disabled": {
+          "active_state_vram_bytes": 0,
+          "alice_logit": 7.02734375,
+          "alice_probability": 0.00023412609880324453,
+          "bob_logit": 6.12109375,
+          "bob_probability": 9.459550346946344e-05,
+          "gate": 0.0,
+          "generated": " able",
+          "kl_from_base": -1.646096947638398e-08,
+          "router_accepted": false,
+          "router_score": null,
+          "selected_index": null,
+          "selected_state": null
+        },
+        "translator_disabled": {
+          "active_state_vram_bytes": 1077,
+          "alice_logit": 7.02734375,
+          "alice_probability": 0.00023412609880324453,
+          "bob_logit": 6.12109375,
+          "bob_probability": 9.459550346946344e-05,
+          "gate": 0.0,
+          "generated": " able",
+          "kl_from_base": -1.646096947638398e-08,
+          "router_accepted": true,
+          "router_score": 5.590433597564697,
+          "selected_index": 0,
+          "selected_state": "user"
+        },
+        "translator_oracle_route": {
+          "active_state_vram_bytes": 1077,
+          "alice_logit": 40.03125,
+          "alice_probability": 1.0,
+          "bob_logit": 13.859375,
+          "bob_probability": 4.302284223323127e-12,
+          "gate": 0.9909488558769226,
+          "generated": " Alice",
+          "kl_from_base": 8.359650611877441,
+          "router_accepted": true,
+          "router_score": 5.590433597564697,
+          "selected_index": 0,
+          "selected_state": "user"
+        },
+        "wrong_entity": {
+          "active_state_vram_bytes": 1077,
+          "alice_logit": 7.02734375,
+          "alice_probability": 0.00023412609880324453,
+          "bob_logit": 6.12109375,
+          "bob_probability": 9.459550346946344e-05,
+          "gate": 0.0,
+          "generated": " able",
+          "kl_from_base": -1.646096947638398e-08,
+          "router_accepted": false,
+          "router_score": -0.30040669441223145,
+          "selected_index": 0,
+          "selected_state": "someone-else"
+        },
+        "wrong_relation": {
+          "active_state_vram_bytes": 1077,
+          "alice_logit": 7.02734375,
+          "alice_probability": 0.00023412609880324453,
+          "bob_logit": 6.12109375,
+          "bob_probability": 9.459550346946344e-05,
+          "gate": 0.0,
+          "generated": " able",
+          "kl_from_base": -1.646096947638398e-08,
+          "router_accepted": false,
+          "router_score": 4.078105926513672,
+          "selected_index": 0,
+          "selected_state": "user"
+        }
+      },
+      "experiment": "active-system-cuda-failure-attribution-v1",
+      "extra_prompt_tokens": 0,
+      "full_package_uploaded_to_cuda": false,
+      "inactive_package_entries": 5,
+      "inactive_vram_delta_bytes": 0,
+      "latency_seconds": {
+        "frozen_base": 0.0174486715994135,
+        "historical": 0.019347908600320807,
+        "invalidated": 0.01760459740035003,
+        "p_cache_only": 0.019043124400195666,
+        "p_cache_plus_p_package": 0.019569637600216083,
+        "p_package_a_relevant": 0.019282742799987318,
+        "p_package_b_relevant": 0.018934362999425504,
+        "p_package_context_creative": 0.01985094979972928,
+        "p_package_context_technical": 0.019666298399533842,
+        "p_package_contradictory_low_confidence": 0.0175312320003286,
+        "p_package_irrelevant": 0.01746072020032443,
+        "router_disabled": 0.017419308600074145,
+        "translator_disabled": 0.01867739240042283,
+        "translator_oracle_route": 0.018915273399761644,
+        "wrong_entity": 0.019296769200445853,
+        "wrong_relation": 0.018960535999940475
+      },
+      "natural_interaction": {
+        "frozen_base": {
+          "kl_from_base": 4.2250388077036405e-08,
+          "loss": 5.47836971282959,
+          "samples": [
+            " \"",
+            "\n",
+            " \""
+          ]
+        },
+        "p_cache_only": {
+          "kl_from_base": 4.2250388077036405e-08,
+          "loss": 5.47836971282959,
+          "samples": [
+            " \"",
+            "\n",
+            " \""
+          ]
+        },
+        "p_cache_plus_p_package": {
+          "kl_from_base": 4.2250388077036405e-08,
+          "loss": 5.47836971282959,
+          "samples": [
+            " \"",
+            "\n",
+            " \""
+          ]
+        },
+        "p_package_contradictory_low_confidence": {
+          "kl_from_base": 4.2250388077036405e-08,
+          "loss": 5.47836971282959,
+          "samples": [
+            " \"",
+            "\n",
+            " \""
+          ]
+        },
+        "p_package_irrelevant": {
+          "kl_from_base": 4.2250388077036405e-08,
+          "loss": 5.47836971282959,
+          "samples": [
+            " \"",
+            "\n",
+            " \""
+          ]
+        },
+        "p_package_relevant": {
+          "kl_from_base": 4.2250388077036405e-08,
+          "loss": 5.47836971282959,
+          "samples": [
+            " \"",
+            "\n",
+            " \""
+          ]
+        }
+      },
+      "relevant_personality_chat": {
+        "base_target_loss": 8.359650611877441,
+        "generated": " Alice",
+        "package_target_loss": -0.0,
+        "target": "Alice",
+        "target_accuracy": 1.0
+      },
+      "source_tokens_in_recent_kv": 0
+    },
+    "natural_rp": {
+      "base_loss": 5.583366870880127,
+      "conditions": {
+        "base": {
+          "kl": -3.993045538663864e-08,
+          "loss": 5.583366870880127,
+          "samples": [
+            "\n\n\"I'm not",
+            "\n\n\"I'm going"
+          ]
+        },
+        "invalidated": {
+          "kl": -3.993045538663864e-08,
+          "loss": 5.583366870880127,
+          "samples": [
+            "\n\n\"I'm not",
+            "\n\n\"I'm going"
+          ]
+        },
+        "irrelevant": {
+          "kl": -3.993045538663864e-08,
+          "loss": 5.583366870880127,
+          "samples": [
+            "\n\n\"I'm not",
+            "\n\n\"I'm going"
+          ]
+        },
+        "wrong_entity": {
+          "kl": -3.993045538663864e-08,
+          "loss": 5.583366870880127,
+          "samples": [
+            "\n\n\"I'm not",
+            "\n\n\"I'm going"
+          ]
+        }
+      },
+      "relevant_state_generation_sample": " Alice"
+    },
+    "personality_counterfactual": {
+      "frozen_base": {
+        "alice_logit": 7.02734375,
+        "alice_probability": 0.00023412609880324453,
+        "bob_logit": 6.12109375,
+        "bob_probability": 9.459550346946344e-05,
+        "gate": 0.0,
+        "generated": " able",
+        "kl_from_base": -1.646096947638398e-08
+      },
+      "p_cache_only": {
+        "alice_logit": 7.02734375,
+        "alice_probability": 0.00023412609880324453,
+        "bob_logit": 6.12109375,
+        "bob_probability": 9.459550346946344e-05,
+        "gate": 0.0,
+        "generated": " able",
+        "kl_from_base": -1.646096947638398e-08
+      },
+      "p_cache_plus_p_package": {
+        "alice_logit": 40.03125,
+        "alice_probability": 1.0,
+        "bob_logit": 13.859375,
+        "bob_probability": 4.302284223323127e-12,
+        "gate": 0.9909488558769226,
+        "generated": " Alice",
+        "kl_from_base": 8.359650611877441
+      },
+      "p_package_a_relevant": {
+        "alice_logit": 40.03125,
+        "alice_probability": 1.0,
+        "bob_logit": 13.859375,
+        "bob_probability": 4.302284223323127e-12,
+        "gate": 0.9909488558769226,
+        "generated": " Alice",
+        "kl_from_base": 8.359650611877441
+      },
+      "p_package_b_relevant": {
+        "alice_logit": 14.0,
+        "alice_probability": 8.776464277548968e-11,
+        "bob_logit": 37.15625,
+        "bob_probability": 0.9998875856399536,
+        "gate": 0.9605370163917542,
+        "generated": " Bob",
+        "kl_from_base": 9.265372276306152
+      },
+      "p_package_context_creative": {
+        "alice_logit": 14.0,
+        "alice_probability": 8.776464277548968e-11,
+        "bob_logit": 37.15625,
+        "bob_probability": 0.9998875856399536,
+        "gate": 0.9605370163917542,
+        "generated": " Bob",
+        "kl_from_base": 9.265372276306152
+      },
+      "p_package_context_technical": {
+        "alice_logit": 40.03125,
+        "alice_probability": 1.0,
+        "bob_logit": 13.859375,
+        "bob_probability": 4.302284223323127e-12,
+        "gate": 0.9909488558769226,
+        "generated": " Alice",
+        "kl_from_base": 8.359650611877441
+      },
+      "p_package_contradictory_low_confidence": {
+        "alice_logit": 7.02734375,
+        "alice_probability": 0.00023412609880324453,
+        "bob_logit": 6.12109375,
+        "bob_probability": 9.459550346946344e-05,
+        "gate": 0.0,
+        "generated": " able",
+        "kl_from_base": -1.646096947638398e-08
+      },
+      "p_package_irrelevant": {
+        "alice_logit": 7.02734375,
+        "alice_probability": 0.00023412609880324453,
+        "bob_logit": 6.12109375,
+        "bob_probability": 9.459550346946344e-05,
+        "gate": 0.0,
+        "generated": " able",
+        "kl_from_base": -1.646096947638398e-08
+      }
+    },
+    "personality_natural_rp": {
+      "frozen_base": {
+        "kl_from_base": 4.2250388077036405e-08,
+        "loss": 5.47836971282959,
+        "samples": [
+          " \"",
+          "\n",
+          " \""
+        ]
+      },
+      "p_cache_only": {
+        "kl_from_base": 4.2250388077036405e-08,
+        "loss": 5.47836971282959,
+        "samples": [
+          " \"",
+          "\n",
+          " \""
+        ]
+      },
+      "p_cache_plus_p_package": {
+        "kl_from_base": 4.2250388077036405e-08,
+        "loss": 5.47836971282959,
+        "samples": [
+          " \"",
+          "\n",
+          " \""
+        ]
+      },
+      "p_package_contradictory_low_confidence": {
+        "kl_from_base": 4.2250388077036405e-08,
+        "loss": 5.47836971282959,
+        "samples": [
+          " \"",
+          "\n",
+          " \""
+        ]
+      },
+      "p_package_irrelevant": {
+        "kl_from_base": 4.2250388077036405e-08,
+        "loss": 5.47836971282959,
+        "samples": [
+          " \"",
+          "\n",
+          " \""
+        ]
+      },
+      "p_package_relevant": {
+        "kl_from_base": 4.2250388077036405e-08,
+        "loss": 5.47836971282959,
+        "samples": [
+          " \"",
+          "\n",
+          " \""
+        ]
+      }
+    },
+    "source_artifacts": [
+      "artifacts/phase-b-split-translator.json",
+      "artifacts/phase-b-personality-package.json"
+    ],
+    "state_ablations": {
+      "full_system_with_preservation": {
+        "full_token_accuracy": 1.0,
+        "gate_activation": 0.9820089340209961,
+        "state_candidate_accuracy": 1.0
+      },
+      "router_only": {
+        "active_vram_overhead_bytes": 11035444,
+        "hidden_only_top1_accuracy": 0.0,
+        "latency_seconds": 0.10144930460010074,
+        "mrr": 1.0,
+        "oracle_query_mrr": 1.0,
+        "oracle_query_top1_accuracy": 1.0,
+        "oracle_query_top4_recall": 1.0,
+        "state_generation_accuracy": 1.0,
+        "top1_accuracy": 1.0,
+        "top2_recall": 1.0,
+        "top4_recall": 1.0
+      },
+      "router_plus_translator_plus_gate": {
+        "historical_state_kl": 9.595059236744419e-05,
+        "rp_kl": -3.993045538663864e-08,
+        "rp_loss": 5.583366870880127,
+        "state_candidate_accuracy": 1.0,
+        "state_loss": 1.8655489839147776e-05,
+        "wrong_state_kl": 9.595059236744419e-05
+      },
+      "router_plus_translator_without_gate": {
+        "state_candidate_accuracy": 1.0
+      },
+      "translator_only_oracle_routing": {
+        "state_candidate_accuracy": 1.0
+      }
+    },
+    "state_counterfactual": {
+      "disabled": {
+        "alice_logit": 5.515625,
+        "alice_probability": 3.538730743457563e-05,
+        "bob_logit": 6.2734375,
+        "bob_probability": 7.55025030230172e-05,
+        "gate": 0.0,
+        "generated": " a"
+      },
+      "p1_silver_alice": {
+        "alice_logit": 40.09375,
+        "alice_probability": 1.0,
+        "bob_logit": 14.3125,
+        "bob_probability": 6.3583643558629e-12,
+        "gate": 0.9964228272438049,
+        "generated": " Alice"
+      },
+      "p2_silver_bob": {
+        "alice_logit": 13.0234375,
+        "alice_probability": 4.473376963992637e-12,
+        "bob_logit": 39.15625,
+        "bob_probability": 0.9999349117279053,
+        "gate": 0.9842994213104248,
+        "generated": " Bob"
+      },
+      "p3_gold_alice": {
+        "alice_logit": 5.515625,
+        "alice_probability": 3.538730743457563e-05,
+        "bob_logit": 6.2734375,
+        "bob_probability": 7.55025030230172e-05,
+        "gate": 0.0,
+        "generated": " a"
+      },
+      "p4_silver_historical": {
+        "alice_logit": 5.515625,
+        "alice_probability": 3.538730743457563e-05,
+        "bob_logit": 6.2734375,
+        "bob_probability": 7.55025030230172e-05,
+        "gate": 0.0,
+        "generated": " a"
+      },
+      "p4_silver_invalidated": {
+        "alice_logit": 5.515625,
+        "alice_probability": 3.538730743457563e-05,
+        "bob_logit": 6.2734375,
+        "bob_probability": 7.55025030230172e-05,
+        "gate": 0.0,
+        "generated": " a"
+      }
+    }
+  },
+  "ppkg_scaling": {
+    "100": {
+      "build_seconds": 0.005182955999771366,
+      "candidate_headers": 4,
+      "canonical_conversion_cpu_seconds": 0.0005506600000000361,
+      "canonical_conversion_wall_seconds": 0.0005500090010173153,
+      "checksum_seconds": 0.0010304470015398692,
+      "db_open_seconds": 0.00020484400010900572,
+      "disk_bytes": 118784,
+      "entries_loaded": 4,
+      "inactive_vram_bytes": 0,
+      "logical_bytes_read": 2789,
+      "python_peak_allocation_bytes": 9086,
+      "query_plan": {
+        "scope": [
+          "(4, 0, 54, 'SEARCH entries USING COVERING INDEX entry_scope_route (status=? AND scope=?)')"
+        ],
+        "subject": [
+          "(4, 0, 54, 'SEARCH entries USING COVERING INDEX entry_subject_route (status=? AND subject=?)')"
+        ]
+      },
+      "routing_header_cpu_seconds": 0.002198153000000147,
+      "routing_header_wall_seconds": 0.002207458997872891,
+      "row_hydration_cpu_seconds": 0.00011678899999978398,
+      "row_hydration_wall_seconds": 0.00011649800217128359
+    },
+    "1000": {
+      "build_seconds": 0.030133395001030294,
+      "candidate_headers": 33,
+      "canonical_conversion_cpu_seconds": 0.0004903580000004126,
+      "canonical_conversion_wall_seconds": 0.0004913600023428444,
+      "checksum_seconds": 0.008523084998159902,
+      "db_open_seconds": 0.0002957940014312044,
+      "disk_bytes": 638976,
+      "entries_loaded": 4,
+      "inactive_vram_bytes": 0,
+      "logical_bytes_read": 6855,
+      "python_peak_allocation_bytes": 19832,
+      "query_plan": {
+        "scope": [
+          "(4, 0, 54, 'SEARCH entries USING COVERING INDEX entry_scope_route (status=? AND scope=?)')"
+        ],
+        "subject": [
+          "(4, 0, 54, 'SEARCH entries USING COVERING INDEX entry_subject_route (status=? AND subject=?)')"
+        ]
+      },
+      "routing_header_cpu_seconds": 0.014248357999999683,
+      "routing_header_wall_seconds": 0.014324849998956779,
+      "row_hydration_cpu_seconds": 0.00011794099999917762,
+      "row_hydration_wall_seconds": 0.0001179409991891589
+    },
+    "10000": {
+      "build_seconds": 0.29831144099807716,
+      "candidate_headers": 130,
+      "canonical_conversion_cpu_seconds": 0.0005051340000008508,
+      "canonical_conversion_wall_seconds": 0.0005099939990031999,
+      "checksum_seconds": 0.08329692499683006,
+      "db_open_seconds": 0.00028353100060485303,
+      "disk_bytes": 5894144,
+      "entries_loaded": 4,
+      "inactive_vram_bytes": 0,
+      "logical_bytes_read": 20616,
+      "python_peak_allocation_bytes": 75123,
+      "query_plan": {
+        "scope": [
+          "(4, 0, 54, 'SEARCH entries USING COVERING INDEX entry_scope_route (status=? AND scope=?)')"
+        ],
+        "subject": [
+          "(4, 0, 54, 'SEARCH entries USING COVERING INDEX entry_subject_route (status=? AND subject=?)')"
+        ]
+      },
+      "routing_header_cpu_seconds": 0.05690157699999965,
+      "routing_header_wall_seconds": 0.05726086499998928,
+      "row_hydration_cpu_seconds": 0.00011336200000044983,
+      "row_hydration_wall_seconds": 0.00011310199988656677
+    },
+    "100000": {
+      "build_seconds": 3.1510163159982767,
+      "candidate_headers": 152,
+      "canonical_conversion_cpu_seconds": 0.0004911590000009625,
+      "canonical_conversion_wall_seconds": 0.0004947460001858417,
+      "checksum_seconds": 0.8238876559989876,
+      "db_open_seconds": 0.000549067000974901,
+      "disk_bytes": 58720256,
+      "entries_loaded": 4,
+      "inactive_vram_bytes": 0,
+      "logical_bytes_read": 23715,
+      "python_peak_allocation_bytes": 87891,
+      "query_plan": {
+        "scope": [
+          "(4, 0, 54, 'SEARCH entries USING COVERING INDEX entry_scope_route (status=? AND scope=?)')"
+        ],
+        "subject": [
+          "(4, 0, 54, 'SEARCH entries USING COVERING INDEX entry_subject_route (status=? AND subject=?)')"
+        ]
+      },
+      "routing_header_cpu_seconds": 0.06670220700000051,
+      "routing_header_wall_seconds": 0.06710040300094988,
+      "row_hydration_cpu_seconds": 0.00011785099999883641,
+      "row_hydration_wall_seconds": 0.00011752000136766583
+    }
+  },
+  "process_peak_rss_bytes": 1001316352,
+  "router_scaling": {
+    "attribution": "The pre-audit CanonicalPStore allowed semantic merge across different entity/relation identities. Repeated factorized vectors therefore aliased slots at 256/512 even for oracle queries. Identity-constrained merge removes that storage corruption; the matched post-fix canonical router remains 100% through 1024. Linear scan affects latency but did not cause the accuracy loss.",
+    "immutable_pre_fix_baseline": {
+      "128": 1.0,
+      "256": 0.949999988079071,
+      "512": 0.8500000238418579
+    },
+    "measurements": {
+      "1024": {
+        "entity_confusions": 0,
+        "exact_query_anchor_collisions": 0,
+        "failure_examples": [],
+        "historical_confusions": 0,
+        "latency_seconds": 0.0006750829998054542,
+        "mrr": 1.0,
+        "relation_confusions": 0,
+        "top1_accuracy": 1.0,
+        "top4_recall": 1.0
+      },
+      "128": {
+        "entity_confusions": 0,
+        "exact_query_anchor_collisions": 0,
+        "failure_examples": [],
+        "historical_confusions": 0,
+        "latency_seconds": 0.0003642720002972055,
+        "mrr": 1.0,
+        "relation_confusions": 0,
+        "top1_accuracy": 1.0,
+        "top4_recall": 1.0
+      },
+      "20": {
+        "entity_confusions": 0,
+        "exact_query_anchor_collisions": 0,
+        "failure_examples": [],
+        "historical_confusions": 0,
+        "latency_seconds": 0.0003294770031061489,
+        "mrr": 1.0,
+        "relation_confusions": 0,
+        "top1_accuracy": 1.0,
+        "top4_recall": 1.0
+      },
+      "256": {
+        "entity_confusions": 0,
+        "exact_query_anchor_collisions": 0,
+        "failure_examples": [],
+        "historical_confusions": 0,
+        "latency_seconds": 0.00039848600135883316,
+        "mrr": 1.0,
+        "relation_confusions": 0,
+        "top1_accuracy": 1.0,
+        "top4_recall": 1.0
+      },
+      "4": {
+        "entity_confusions": 0,
+        "exact_query_anchor_collisions": 0,
+        "failure_examples": [],
+        "historical_confusions": 0,
+        "latency_seconds": 0.00035979299718746915,
+        "mrr": 1.0,
+        "relation_confusions": 0,
+        "top1_accuracy": 1.0,
+        "top4_recall": 1.0
+      },
+      "512": {
+        "entity_confusions": 0,
+        "exact_query_anchor_collisions": 0,
+        "failure_examples": [],
+        "historical_confusions": 0,
+        "latency_seconds": 0.0004960180012858473,
+        "mrr": 1.0,
+        "relation_confusions": 0,
+        "top1_accuracy": 1.0,
+        "top4_recall": 1.0
+      },
+      "64": {
+        "entity_confusions": 0,
+        "exact_query_anchor_collisions": 0,
+        "failure_examples": [],
+        "historical_confusions": 0,
+        "latency_seconds": 0.00033151000025100075,
+        "mrr": 1.0,
+        "relation_confusions": 0,
+        "top1_accuracy": 1.0,
+        "top4_recall": 1.0
+      }
+    }
+  },
+  "timestamp": "2026-08-22T00:00:00+00:00",
+  "training_performed": false,
+  "translate_profile": {
+    "cpu": {
+      "parameter_bytes": 10829856,
+      "parameter_count": 2707464,
+      "translation_and_gate_cpu_seconds": 0.003563432500000019,
+      "translation_and_gate_wall_seconds": 0.0006066100013413234
+    },
+    "cuda": {
+      "active_vram_delta_bytes": 8914432,
+      "bytes_copied_to_cuda": 164096,
+      "copy_wall_seconds": 0.0005022000004828442,
+      "peak_vram_delta_bytes": 9441280,
+      "translation_and_gate_wall_seconds": 0.0012042837000384072
+    }
+  }
+}

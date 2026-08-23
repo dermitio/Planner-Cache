@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650">
+<rect width="1100" height="650" fill="#ffffff"/>
+<text x="550" y="42" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#12233f">Matched P-cache and retained-KV VRAM</text>
+<text x="550" y="72" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#50627a">Frozen Pythia-1.4B, batch 1, float16 base, 8 greedy generated tokens</text>
+<line x1="105" y1="560.00" x2="1045" y2="560.00" stroke="#dbe4ee" stroke-width="1"/>
+<text x="93" y="565.00" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#50627a">0.0</text>
+<line x1="105" y1="471.00" x2="1045" y2="471.00" stroke="#dbe4ee" stroke-width="1"/>
+<text x="93" y="476.00" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#50627a">63.7</text>
+<line x1="105" y1="382.00" x2="1045" y2="382.00" stroke="#dbe4ee" stroke-width="1"/>
+<text x="93" y="387.00" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#50627a">127.3</text>
+<line x1="105" y1="293.00" x2="1045" y2="293.00" stroke="#dbe4ee" stroke-width="1"/>
+<text x="93" y="298.00" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#50627a">191.0</text>
+<line x1="105" y1="204.00" x2="1045" y2="204.00" stroke="#dbe4ee" stroke-width="1"/>
+<text x="93" y="209.00" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#50627a">254.7</text>
+<line x1="105" y1="115.00" x2="1045" y2="115.00" stroke="#dbe4ee" stroke-width="1"/>
+<text x="93" y="120.00" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#50627a">318.4</text>
+<line x1="105.00" y1="115" x2="105.00" y2="560" stroke="#eef2f7" stroke-width="1"/>
+<text x="105.00" y="587" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#50627a">64</text>
+<line x1="293.00" y1="115" x2="293.00" y2="560" stroke="#eef2f7" stroke-width="1"/>
+<text x="293.00" y="587" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#50627a">256</text>
+<line x1="1045.00" y1="115" x2="1045.00" y2="560" stroke="#eef2f7" stroke-width="1"/>
+<text x="1045.00" y="587" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#50627a">1024</text>
+<line x1="105" y1="560" x2="1045" y2="560" stroke="#385170" stroke-width="2"/>
+<line x1="105" y1="115" x2="105" y2="560" stroke="#385170" stroke-width="2"/>
+<polyline points="105.00,550.04 293.00,522.03 1045.00,415.34" fill="none" stroke="#b36a2e" stroke-width="4"/>
+<circle cx="105.00" cy="550.04" r="5" fill="#b36a2e"/>
+<circle cx="293.00" cy="522.03" r="5" fill="#b36a2e"/>
+<circle cx="1045.00" cy="415.34" r="5" fill="#b36a2e"/>
+<line x1="105" y1="620" x2="137" y2="620" stroke="#b36a2e" stroke-width="4"/>
+<text x="147" y="625" font-family="Arial,sans-serif" font-size="14" fill="#28384e">P-cache only</text>
+<polyline points="105.00,534.29 293.00,451.78 1045.00,148.69" fill="none" stroke="#2c7a7b" stroke-width="4"/>
+<circle cx="105.00" cy="534.29" r="5" fill="#2c7a7b"/>
+<circle cx="293.00" cy="451.78" r="5" fill="#2c7a7b"/>
+<circle cx="1045.00" cy="148.69" r="5" fill="#2c7a7b"/>
+<line x1="385" y1="620" x2="417" y2="620" stroke="#2c7a7b" stroke-width="4"/>
+<text x="427" y="625" font-family="Arial,sans-serif" font-size="14" fill="#28384e">Retained KV only</text>
+<polyline points="105.00,534.25 293.00,451.59 1045.00,147.96" fill="none" stroke="#6856a5" stroke-width="4"/>
+<circle cx="105.00" cy="534.25" r="5" fill="#6856a5"/>
+<circle cx="293.00" cy="451.59" r="5" fill="#6856a5"/>
+<circle cx="1045.00" cy="147.96" r="5" fill="#6856a5"/>
+<line x1="665" y1="620" x2="697" y2="620" stroke="#6856a5" stroke-width="4"/>
+<text x="707" y="625" font-family="Arial,sans-serif" font-size="14" fill="#28384e">P-cache plus KV</text>
+<text x="575.0" y="595" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#28384e">Prompt tokens and configured P slots</text>
+<text x="28" y="337.5" text-anchor="middle" transform="rotate(-90 28 337.5)" font-family="Arial,sans-serif" font-size="15" fill="#28384e">Incremental peak allocated MiB</text>
+</svg>

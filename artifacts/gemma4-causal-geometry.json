@@ -1,0 +1,446 @@
+{
+  "artifacts": {
+    "gemma4-causal-full-string-teacher-layer41.safetensors": {
+      "bytes": 2628640,
+      "sha256": "ff529a3ed3f1cd21f44774b582a51418376d73e883f53f7aeb773e969f516fe6"
+    },
+    "gemma4-causal-optimized-layer-sweep.json": {
+      "bytes": 68079,
+      "sha256": "7f513af2ac662dd6482473aaeed422c59b186606e8741c8ce3fdf1558769cf17"
+    },
+    "gemma4-causal-output-geometry-256.json": {
+      "bytes": 231311,
+      "sha256": "d5fde768035fecac63680eb2627ae7135fa2e196f1a8832859c3bed2326b9f27"
+    },
+    "gemma4-causal-output-geometry-sweep.json": {
+      "bytes": 200468,
+      "sha256": "a1f3b7dccf44c68122f5596093bb8463b009bbb6c5db9084a6487ef441b4bb06"
+    },
+    "gemma4-causal-output-rank128-heldout.json": {
+      "bytes": 41976,
+      "sha256": "abd9c0516a13e3f9ba6ecb47b782f2c0d8649dad4cece8fc267d1a00d22f5c01"
+    },
+    "gemma4-causal-output-rank128.translate": {
+      "bytes": 2077372,
+      "sha256": "b2a486264fac264b9ecddf2ba18ce0e63ff18528fa72e95735407930be2df0a8"
+    },
+    "gemma4-causal-output-teacher-layer41.safetensors": {
+      "bytes": 2628640,
+      "sha256": "ba02705b3840c507d5b34bafb7b0341fa2169dcfe600e5c3fe4f8e5e8d95f90d"
+    },
+    "gemma4-causal-output.split.json": {
+      "bytes": 4804,
+      "sha256": "92239f54376d5febccfef1e08453ce979f52c80517e9e2e63071a7ede0b40698"
+    },
+    "gemma4-causal-output.training.json": {
+      "bytes": 8860,
+      "sha256": "e66a1ef4ecd48f1ccc78f9e2ce4a9a882e5fe2ab100cab13e09d62096f2e2a66"
+    },
+    "gemma4-causal-residual-sweep-layer41.json": {
+      "bytes": 160179,
+      "sha256": "84a12993f8a1f49857e2134dbdc7da82e1f770bcd8bd0bfe66308e10bb7875d1"
+    },
+    "gemma4-gguf-layer-inventory.json": {
+      "bytes": 262436,
+      "sha256": "458d9bb7083f796681d2db0e1b5d0f4d8ab781070771ea27260668ad219dc7f1"
+    },
+    "gemma4-layer-lexical-probe.json": {
+      "bytes": 104641,
+      "sha256": "38a7d162c02ec6d2904bde1b01b0d1de91aa18e339ed2f8f9e366fc48d67869c"
+    },
+    "gemma4-layer-lexical-probe.split.json": {
+      "bytes": 12431,
+      "sha256": "4f9a0de88af31bea150450700ac373a9805026ce1b0a66679123e75c8cd51bd9"
+    }
+  },
+  "basis_sweep": {
+    "held_out_causal": {
+      "128": {
+        "examples": 67,
+        "first_token_accuracy": 0.6268656716417911,
+        "full_string_accuracy": 0.0,
+        "mean_kl_from_base": 7.28700000441791,
+        "mean_latency_ms": 638.9151027462686,
+        "mean_residual_norm": 7.02947049761194,
+        "mean_target_logit_lift": 15.25184551761194
+      },
+      "16": {
+        "examples": 67,
+        "first_token_accuracy": 0.2537313432835821,
+        "full_string_accuracy": 0.0,
+        "mean_kl_from_base": 4.284286440716418,
+        "mean_latency_ms": 643.1498355522388,
+        "mean_residual_norm": 5.3959977685074625,
+        "mean_target_logit_lift": 13.468695921492538
+      },
+      "32": {
+        "examples": 67,
+        "first_token_accuracy": 0.44776119402985076,
+        "full_string_accuracy": 0.0,
+        "mean_kl_from_base": 5.436431003134328,
+        "mean_latency_ms": 643.3313485671641,
+        "mean_residual_norm": 6.210206685522388,
+        "mean_target_logit_lift": 14.755060053134327
+      },
+      "64": {
+        "examples": 67,
+        "first_token_accuracy": 0.582089552238806,
+        "full_string_accuracy": 0.0,
+        "mean_kl_from_base": 6.908065931910448,
+        "mean_latency_ms": 651.6869111492538,
+        "mean_residual_norm": 6.9335061450746265,
+        "mean_target_logit_lift": 15.270861699850746
+      }
+    },
+    "optimized_teacher_geometry": [
+      {
+        "adapter": "artifacts/gemma4-causal-residual-rank16.translate",
+        "adapter_size": 872652,
+        "basis_rank": 16,
+        "final_training_loss": 0.3315979540348053,
+        "held_out": {
+          "cosine_similarity": 0.09693609923124313,
+          "predicted_norm_mean": 5.864099502563477,
+          "residual_retrieval_accuracy": 0.13461539149284363,
+          "residual_rmse": 0.3546034097671509,
+          "target_norm_mean": 16.87215232849121
+        },
+        "parameter_count": 217489
+      },
+      {
+        "adapter": "artifacts/gemma4-causal-residual-rank32.translate",
+        "adapter_size": 1044756,
+        "basis_rank": 32,
+        "final_training_loss": 0.2671690881252289,
+        "held_out": {
+          "cosine_similarity": 0.0852930098772049,
+          "predicted_norm_mean": 7.857433795928955,
+          "residual_retrieval_accuracy": 0.13461539149284363,
+          "residual_rmse": 0.369229793548584,
+          "target_norm_mean": 16.87215232849121
+        },
+        "parameter_count": 260513
+      },
+      {
+        "adapter": "artifacts/gemma4-causal-residual-rank64.translate",
+        "adapter_size": 1388948,
+        "basis_rank": 64,
+        "final_training_loss": 0.15712782740592957,
+        "held_out": {
+          "cosine_similarity": 0.0797925740480423,
+          "predicted_norm_mean": 10.424757957458496,
+          "residual_retrieval_accuracy": 0.21153846383094788,
+          "residual_rmse": 0.39234986901283264,
+          "target_norm_mean": 16.87215232849121
+        },
+        "parameter_count": 346561
+      },
+      {
+        "adapter": "artifacts/gemma4-causal-residual-rank128.translate",
+        "adapter_size": 2077372,
+        "basis_rank": 128,
+        "final_training_loss": 0.025445468723773956,
+        "held_out": {
+          "cosine_similarity": 0.06109185516834259,
+          "predicted_norm_mean": 13.550046920776367,
+          "residual_retrieval_accuracy": 0.19230769574642181,
+          "residual_rmse": 0.4291774034500122,
+          "target_norm_mean": 16.87215232849121
+        },
+        "parameter_count": 518657
+      }
+    ],
+    "training_geometry": [
+      {
+        "adapter": "artifacts/gemma4-causal-output-rank16.translate",
+        "adapter_size": 872652,
+        "basis_rank": 16,
+        "final_training_loss": 0.1329430490732193,
+        "held_out": {
+          "cosine_similarity": 0.6219741702079773,
+          "predicted_norm_mean": 5.410730361938477,
+          "residual_retrieval_accuracy": 0.3432835638523102,
+          "residual_rmse": 0.12045309692621231,
+          "target_norm_mean": 8.0
+        },
+        "parameter_count": 217489
+      },
+      {
+        "adapter": "artifacts/gemma4-causal-output-rank32.translate",
+        "adapter_size": 1044756,
+        "basis_rank": 32,
+        "final_training_loss": 0.07947012037038803,
+        "held_out": {
+          "cosine_similarity": 0.6769605875015259,
+          "predicted_norm_mean": 6.2181620597839355,
+          "residual_retrieval_accuracy": 0.4179104268550873,
+          "residual_rmse": 0.11266947537660599,
+          "target_norm_mean": 8.0
+        },
+        "parameter_count": 260513
+      },
+      {
+        "adapter": "artifacts/gemma4-causal-output-rank64.translate",
+        "adapter_size": 1388948,
+        "basis_rank": 64,
+        "final_training_loss": 0.019700301811099052,
+        "held_out": {
+          "cosine_similarity": 0.7223328351974487,
+          "predicted_norm_mean": 6.9498610496521,
+          "residual_retrieval_accuracy": 0.4925372898578644,
+          "residual_rmse": 0.10634899139404297,
+          "target_norm_mean": 8.0
+        },
+        "parameter_count": 346561
+      },
+      {
+        "adapter": "artifacts/gemma4-causal-output-rank128.translate",
+        "adapter_size": 2077372,
+        "basis_rank": 128,
+        "final_training_loss": 0.0002786065451800823,
+        "held_out": {
+          "cosine_similarity": 0.7179967761039734,
+          "predicted_norm_mean": 7.0294365882873535,
+          "residual_retrieval_accuracy": 0.4776119291782379,
+          "residual_rmse": 0.10853797197341919,
+          "target_norm_mean": 8.0
+        },
+        "parameter_count": 518657
+      }
+    ]
+  },
+  "boundaries": {
+    "causal_residual_controllability": "exact first-token output rows are controllable at layer 41",
+    "context_dependence": "exact first-token controls transferred across all five neutral contexts",
+    "lexical_representation": "observable at all layers and linearly separable on the probe",
+    "multi_token_readout": "static residual repeated the first piece and scored zero on all multi-token full strings",
+    "quantization_runtime": "actual Q8 GGUF public libllama control-vector path was used successfully",
+    "translator_capacity": "best compact rank-128 adapter reached 42/67 held-out first tokens and 0/67 full strings"
+  },
+  "completion_gate_passed": false,
+  "context_invariance": {
+    "contexts": 5,
+    "first_token_accuracy_each": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "full_string_accuracy_each": [
+      0.5833333333333334,
+      0.5833333333333334,
+      0.5833333333333334,
+      0.5833333333333334,
+      0.5833333333333334
+    ],
+    "mean_kl_each": [
+      10.276523816666666,
+      8.682812959166666,
+      6.30619914,
+      10.475248359166667,
+      7.938307100833334
+    ]
+  },
+  "format": "planner-cache-gemma-causal-geometry-report-v1",
+  "gguf_inventory": {
+    "artifact": "artifacts/gemma4-gguf-layer-inventory.json",
+    "per_layer_lexical_path": true,
+    "tensor_count": 720,
+    "tied_input_output": true
+  },
+  "inactive_paths": {
+    "applies_to": [
+      "P disabled",
+      "wrong entity",
+      "wrong relation",
+      "wrong value rejected by router",
+      "historical",
+      "invalidated",
+      "router disabled",
+      "translator disabled"
+    ],
+    "examples": 256,
+    "maximum_kl": 0,
+    "maximum_logit_difference": 0
+  },
+  "lexical_probe": {
+    "artifact": "artifacts/gemma4-layer-lexical-probe.json",
+    "best_canonical_probe_layer": {
+      "canonical_cosine_neighborhood_quality": 0.8608223795890808,
+      "canonical_linear_probe_accuracy": 0.8500000238418579,
+      "categories": {
+        "common_single_token_candidates": {
+          "canonical_cosine": 0.5770940780639648,
+          "canonical_linear_probe_accuracy": 0.0,
+          "output_geometry_retrieval_accuracy": 0.25
+        },
+        "locations": {
+          "canonical_cosine": 0.9849047660827637,
+          "canonical_linear_probe_accuracy": 1.0,
+          "output_geometry_retrieval_accuracy": 1.0
+        },
+        "multi_token": {
+          "canonical_cosine": 0.9795181751251221,
+          "canonical_linear_probe_accuracy": 1.0,
+          "output_geometry_retrieval_accuracy": 1.0
+        },
+        "names": {
+          "canonical_cosine": 0.8467460870742798,
+          "canonical_linear_probe_accuracy": 0.875,
+          "output_geometry_retrieval_accuracy": 0.5
+        },
+        "numbers": {
+          "canonical_cosine": 0.6866424679756165,
+          "canonical_linear_probe_accuracy": 1.0,
+          "output_geometry_retrieval_accuracy": 0.375
+        },
+        "objects": {
+          "canonical_cosine": 0.9596730470657349,
+          "canonical_linear_probe_accuracy": 1.0,
+          "output_geometry_retrieval_accuracy": 1.0
+        },
+        "punctuation_symbols": {
+          "canonical_cosine": 0.8932875990867615,
+          "canonical_linear_probe_accuracy": 0.625,
+          "output_geometry_retrieval_accuracy": 0.375
+        },
+        "statuses": {
+          "canonical_cosine": 0.9710423350334167,
+          "canonical_linear_probe_accuracy": 1.0,
+          "output_geometry_retrieval_accuracy": 1.0
+        },
+        "synthetic_names": {
+          "canonical_cosine": 0.8739501237869263,
+          "canonical_linear_probe_accuracy": 1.0,
+          "output_geometry_retrieval_accuracy": 0.625
+        },
+        "utf8": {
+          "canonical_cosine": 0.835364818572998,
+          "canonical_linear_probe_accuracy": 1.0,
+          "output_geometry_retrieval_accuracy": 1.0
+        }
+      },
+      "direct_hidden_to_output_cosine": 0.0328054316341877,
+      "held_out_count": 80,
+      "layer": 1,
+      "output_geometry_cosine": 0.908496081829071,
+      "output_geometry_retrieval_accuracy": 0.7124999761581421,
+      "representation_norm_mean": 98.20748138427734,
+      "representation_norm_std": 2.721428394317627
+    },
+    "best_output_geometry_layer": {
+      "canonical_cosine_neighborhood_quality": 0.8608223795890808,
+      "canonical_linear_probe_accuracy": 0.8500000238418579,
+      "categories": {
+        "common_single_token_candidates": {
+          "canonical_cosine": 0.5770940780639648,
+          "canonical_linear_probe_accuracy": 0.0,
+          "output_geometry_retrieval_accuracy": 0.25
+        },
+        "locations": {
+          "canonical_cosine": 0.9849047660827637,
+          "canonical_linear_probe_accuracy": 1.0,
+          "output_geometry_retrieval_accuracy": 1.0
+        },
+        "multi_token": {
+          "canonical_cosine": 0.9795181751251221,
+          "canonical_linear_probe_accuracy": 1.0,
+          "output_geometry_retrieval_accuracy": 1.0
+        },
+        "names": {
+          "canonical_cosine": 0.8467460870742798,
+          "canonical_linear_probe_accuracy": 0.875,
+          "output_geometry_retrieval_accuracy": 0.5
+        },
+        "numbers": {
+          "canonical_cosine": 0.6866424679756165,
+          "canonical_linear_probe_accuracy": 1.0,
+          "output_geometry_retrieval_accuracy": 0.375
+        },
+        "objects": {
+          "canonical_cosine": 0.9596730470657349,
+          "canonical_linear_probe_accuracy": 1.0,
+          "output_geometry_retrieval_accuracy": 1.0
+        },
+        "punctuation_symbols": {
+          "canonical_cosine": 0.8932875990867615,
+          "canonical_linear_probe_accuracy": 0.625,
+          "output_geometry_retrieval_accuracy": 0.375
+        },
+        "statuses": {
+          "canonical_cosine": 0.9710423350334167,
+          "canonical_linear_probe_accuracy": 1.0,
+          "output_geometry_retrieval_accuracy": 1.0
+        },
+        "synthetic_names": {
+          "canonical_cosine": 0.8739501237869263,
+          "canonical_linear_probe_accuracy": 1.0,
+          "output_geometry_retrieval_accuracy": 0.625
+        },
+        "utf8": {
+          "canonical_cosine": 0.835364818572998,
+          "canonical_linear_probe_accuracy": 1.0,
+          "output_geometry_retrieval_accuracy": 1.0
+        }
+      },
+      "direct_hidden_to_output_cosine": 0.0328054316341877,
+      "held_out_count": 80,
+      "layer": 1,
+      "output_geometry_cosine": 0.908496081829071,
+      "output_geometry_retrieval_accuracy": 0.7124999761581421,
+      "representation_norm_mean": 98.20748138427734,
+      "representation_norm_std": 2.721428394317627
+    },
+    "examples": 320,
+    "held_out": 80
+  },
+  "memory": {
+    "active_control_vector_bytes": 419840,
+    "inactive_adapter_vram_bytes": 0,
+    "measured_research_runtime_model_vram_mib": 2464,
+    "rank128_float32_parameter_bytes_if_cuda_resident": 2074628,
+    "rank128_plus_control_bytes_if_both_cuda_resident": 2494468
+  },
+  "model": {
+    "architecture": "gemma4",
+    "base_gradients": false,
+    "base_modified": false,
+    "hidden_width": 2560,
+    "id": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive",
+    "layers": 42,
+    "sha256": "a4c4177f9fd7e3f56522675afb742f079a53f9226195b7db5e9888c872f053da"
+  },
+  "status": "rejected_not_general_purpose",
+  "teacher_datasets": {
+    "failed_multi_token_residuals_are_positive": false,
+    "first_token_positive_count": 256,
+    "full_string_positive_count": 28,
+    "full_string_positive_token_counts": [
+      1
+    ]
+  },
+  "teacher_target_comparison": {
+    "exact_tied_output_row": {
+      "best_layer": 41,
+      "first_token_accuracy_12": 1.0,
+      "first_token_accuracy_256": 1.0,
+      "full_string_accuracy_256": 0.109375,
+      "mean_kl_256": 10.5166078709375,
+      "strength": 8.0
+    },
+    "failed_approximate_input_embedding": {
+      "causal_first_token_accuracy": 0.0,
+      "held_out_vocabulary_cosine": 0.335134350694716,
+      "held_out_vocabulary_retrieval": 0.45556640625,
+      "parameter_count": 504706
+    },
+    "optimized_causal_residual": {
+      "best_layer": 41,
+      "first_token_accuracy_12": 0.5,
+      "first_token_accuracy_256": 0.7578125,
+      "full_string_accuracy_256": 0.05078125,
+      "mean_kl_256": 5.061601355429688
+    }
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "base_weights_modified": false,
+  "canonical_representation_probe": {
+    "canonical_decode_accuracy": {
+      "entity": 1.0,
+      "metadata": 1.0,
+      "relation": 1.0,
+      "value": 1.0
+    },
+    "hard_negative_accuracy": {
+      "historical": 1.0,
+      "wrong_entity": 0.97265625,
+      "wrong_value": 1.0
+    },
+    "held_out_combinations": 256,
+    "p_only_state_recovery": 0.97265625,
+    "permutation_stability": 1.0,
+    "permutations_per_combination": 8,
+    "slot_width": 512,
+    "total_held_out_combinations": 519,
+    "train_combinations": 2073,
+    "training_loss_first": 7.440117835998535,
+    "training_loss_last": 0.04114125296473503
+  },
+  "completion_failures": [],
+  "completion_gate": "passed",
+  "cuda_translate": {
+    "active_memory": {
+      "context_creative": {
+        "canonical_store_bytes": 1077,
+        "loaded_entries": 1,
+        "logical_disk_bytes_read": 990,
+        "package_disk_bytes": 45056
+      },
+      "context_technical": {
+        "canonical_store_bytes": 1077,
+        "loaded_entries": 1,
+        "logical_disk_bytes_read": 996,
+        "package_disk_bytes": 45056
+      },
+      "irrelevant": {
+        "canonical_store_bytes": 0,
+        "loaded_entries": 0,
+        "logical_disk_bytes_read": 189,
+        "package_disk_bytes": 45056
+      },
+      "low_confidence": {
+        "canonical_store_bytes": 0,
+        "loaded_entries": 0,
+        "logical_disk_bytes_read": 0,
+        "package_disk_bytes": 45056
+      },
+      "package_a": {
+        "canonical_store_bytes": 1077,
+        "loaded_entries": 1,
+        "logical_disk_bytes_read": 787,
+        "package_disk_bytes": 45056
+      },
+      "package_b": {
+        "canonical_store_bytes": 1077,
+        "loaded_entries": 1,
+        "logical_disk_bytes_read": 783,
+        "package_disk_bytes": 45056
+      }
+    },
+    "base_parameters_with_grad": 0,
+    "candidate_accuracy": {
+      "context_creative_bob": 1.0,
+      "context_technical_alice": 1.0,
+      "irrelevant_matches_base": 1.0,
+      "package_a_alice": 1.0,
+      "package_b_bob": 1.0
+    },
+    "causal": {
+      "frozen_base": {
+        "alice_logit": 7.02734375,
+        "alice_probability": 0.00023412609880324453,
+        "bob_logit": 6.12109375,
+        "bob_probability": 9.459550346946344e-05,
+        "gate": 0.0,
+        "generated": " able",
+        "kl_from_base": -1.646096947638398e-08
+      },
+      "p_cache_only": {
+        "alice_logit": 7.02734375,
+        "alice_probability": 0.00023412609880324453,
+        "bob_logit": 6.12109375,
+        "bob_probability": 9.459550346946344e-05,
+        "gate": 0.0,
+        "generated": " able",
+        "kl_from_base": -1.646096947638398e-08
+      },
+      "p_cache_plus_p_package": {
+        "alice_logit": 40.03125,
+        "alice_probability": 1.0,
+        "bob_logit": 13.859375,
+        "bob_probability": 4.302284223323127e-12,
+        "gate": 0.9909488558769226,
+        "generated": " Alice",
+        "kl_from_base": 8.359650611877441
+      },
+      "p_package_a_relevant": {
+        "alice_logit": 40.03125,
+        "alice_probability": 1.0,
+        "bob_logit": 13.859375,
+        "bob_probability": 4.302284223323127e-12,
+        "gate": 0.9909488558769226,
+        "generated": " Alice",
+        "kl_from_base": 8.359650611877441
+      },
+      "p_package_b_relevant": {
+        "alice_logit": 14.0,
+        "alice_probability": 8.776464277548968e-11,
+        "bob_logit": 37.15625,
+        "bob_probability": 0.9998875856399536,
+        "gate": 0.9605370163917542,
+        "generated": " Bob",
+        "kl_from_base": 9.265372276306152
+      },
+      "p_package_context_creative": {
+        "alice_logit": 14.0,
+        "alice_probability": 8.776464277548968e-11,
+        "bob_logit": 37.15625,
+        "bob_probability": 0.9998875856399536,
+        "gate": 0.9605370163917542,
+        "generated": " Bob",
+        "kl_from_base": 9.265372276306152
+      },
+      "p_package_context_technical": {
+        "alice_logit": 40.03125,
+        "alice_probability": 1.0,
+        "bob_logit": 13.859375,
+        "bob_probability": 4.302284223323127e-12,
+        "gate": 0.9909488558769226,
+        "generated": " Alice",
+        "kl_from_base": 8.359650611877441
+      },
+      "p_package_contradictory_low_confidence": {
+        "alice_logit": 7.02734375,
+        "alice_probability": 0.00023412609880324453,
+        "bob_logit": 6.12109375,
+        "bob_probability": 9.459550346946344e-05,
+        "gate": 0.0,
+        "generated": " able",
+        "kl_from_base": -1.646096947638398e-08
+      },
+      "p_package_irrelevant": {
+        "alice_logit": 7.02734375,
+        "alice_probability": 0.00023412609880324453,
+        "bob_logit": 6.12109375,
+        "bob_probability": 9.459550346946344e-05,
+        "gate": 0.0,
+        "generated": " able",
+        "kl_from_base": -1.646096947638398e-08
+      }
+    },
+    "extra_prompt_tokens": 0,
+    "full_package_uploaded_to_cuda": false,
+    "inactive_package_entries": 5,
+    "inactive_vram_delta_bytes": 0,
+    "latency_seconds": {
+      "frozen_base": 0.0175060088004102,
+      "p_cache_only": 0.019222700600221288,
+      "p_cache_plus_p_package": 0.01935694159983541,
+      "p_package_a_relevant": 0.019251526400330475,
+      "p_package_b_relevant": 0.019145489999937128,
+      "p_package_context_creative": 0.019227325199608458,
+      "p_package_context_technical": 0.01928819700042368,
+      "p_package_contradictory_low_confidence": 0.0174450127997261,
+      "p_package_irrelevant": 0.017540659599762875
+    },
+    "natural_interaction": {
+      "frozen_base": {
+        "kl_from_base": 4.2250388077036405e-08,
+        "loss": 5.47836971282959,
+        "samples": [
+          " \"",
+          "\n",
+          " \""
+        ]
+      },
+      "p_cache_only": {
+        "kl_from_base": 4.2250388077036405e-08,
+        "loss": 5.47836971282959,
+        "samples": [
+          " \"",
+          "\n",
+          " \""
+        ]
+      },
+      "p_cache_plus_p_package": {
+        "kl_from_base": 4.2250388077036405e-08,
+        "loss": 5.47836971282959,
+        "samples": [
+          " \"",
+          "\n",
+          " \""
+        ]
+      },
+      "p_package_contradictory_low_confidence": {
+        "kl_from_base": 4.2250388077036405e-08,
+        "loss": 5.47836971282959,
+        "samples": [
+          " \"",
+          "\n",
+          " \""
+        ]
+      },
+      "p_package_irrelevant": {
+        "kl_from_base": 4.2250388077036405e-08,
+        "loss": 5.47836971282959,
+        "samples": [
+          " \"",
+          "\n",
+          " \""
+        ]
+      },
+      "p_package_relevant": {
+        "kl_from_base": 4.2250388077036405e-08,
+        "loss": 5.47836971282959,
+        "samples": [
+          " \"",
+          "\n",
+          " \""
+        ]
+      }
+    },
+    "relevant_personality_chat": {
+      "base_target_loss": 8.359650611877441,
+      "generated": " Alice",
+      "package_target_loss": -0.0,
+      "target": "Alice",
+      "target_accuracy": 1.0
+    },
+    "source_tokens_in_recent_kv": 0
+  },
+  "deterministic_serialization": {
+    "byte_identical": true,
+    "first_sha256": "faa701fb6150738937fc7b756fb5df226638eedb7599127b0d04d83899ea4bf9",
+    "second_sha256": "faa701fb6150738937fc7b756fb5df226638eedb7599127b0d04d83899ea4bf9"
+  },
+  "durability": {
+    "active_entries_after_restart": 5,
+    "checksum_valid": true,
+    "cold_load_seconds": 0.0012688639981206506,
+    "conversation_replay_required": false
+  },
+  "experiment": "phase-b-personality-package-v1",
+  "format": "pcm-personality-package-v1",
+  "growth": {
+    "100": {
+      "active_canonical_bytes": 4308,
+      "cold_checksum_validation_seconds": 0.005407546999776969,
+      "disk_size_bytes": 81920,
+      "full_package_loaded": false,
+      "inactive_vram_bytes": 0,
+      "loaded_entries": 4,
+      "logical_bytes_read": 16070,
+      "lookup_latency_seconds": 0.07422141599818133,
+      "python_ram_peak_delta_bytes": 66370
+    },
+    "1000": {
+      "active_canonical_bytes": 4308,
+      "cold_checksum_validation_seconds": 0.04806955000094604,
+      "disk_size_bytes": 421888,
+      "full_package_loaded": false,
+      "inactive_vram_bytes": 0,
+      "loaded_entries": 4,
+      "logical_bytes_read": 73991,
+      "lookup_latency_seconds": 0.39593972700095037,
+      "python_ram_peak_delta_bytes": 348920
+    },
+    "10000": {
+      "active_canonical_bytes": 4308,
+      "cold_checksum_validation_seconds": 0.47560709200115525,
+      "disk_size_bytes": 3805184,
+      "full_package_loaded": false,
+      "inactive_vram_bytes": 0,
+      "loaded_entries": 4,
+      "logical_bytes_read": 73991,
+      "lookup_latency_seconds": 0.4038081879989477,
+      "python_ram_peak_delta_bytes": 296020
+    },
+    "100000": {
+      "active_canonical_bytes": 4308,
+      "cold_checksum_validation_seconds": 4.705669751998357,
+      "disk_size_bytes": 37863424,
+      "full_package_loaded": false,
+      "inactive_vram_bytes": 0,
+      "loaded_entries": 4,
+      "logical_bytes_read": 73991,
+      "lookup_latency_seconds": 0.44106237400046666,
+      "python_ram_peak_delta_bytes": 296016
+    }
+  },
+  "lora_used": false,
+  "mechanical": {
+    "change_count": 7,
+    "connected_cross_context_score": 2.586527310885154,
+    "connectivity_outscores_narrow": true,
+    "creative_context_correct": true,
+    "entry_count": 6,
+    "explicit_correction_promoted": true,
+    "irrelevant_loaded_entries": 0,
+    "narrow_context_score": 1.8000000000000003,
+    "old_conclusion_status": "superseded",
+    "one_event_promoted": false,
+    "package_size_bytes": 61440,
+    "persona_entry_id": "personality_6a0ee4fede21e1b53f3a8c4e",
+    "relationship_context_correct": true,
+    "relevance_accuracy": 1.0,
+    "repeated_entry": {
+      "confidence": 0.5567010309278351,
+      "context_diversity": 3,
+      "contradicting_evidence_ids": [
+        "weak-0"
+      ],
+      "created_at": "2026-06-03T00:00:00+00:00",
+      "entry_type": "interaction_style",
+      "evidence_count": 3,
+      "extension": {},
+      "id": "personality_a4d8044a0a392a1518bf7554",
+      "importance": 0.5,
+      "last_reinforced": "2026-06-03T00:00:00+00:00",
+      "relation": "response_style",
+      "relationship": null,
+      "scope": "global",
+      "source_authority": "single_observed_behavior",
+      "status": "active",
+      "strength": 0.7036804069636988,
+      "subject": "user",
+      "supporting_evidence_ids": [
+        "repeat-0",
+        "repeat-1",
+        "repeat-2"
+      ],
+      "updated_at": "2026-06-03T00:00:00+00:00",
+      "value": "concise"
+    },
+    "repeated_promoted": true,
+    "semantic_checksum": "abdbd3dbe3f8ee05fe761ee1625e3a8f8a4ab5259458c4d18210a15fe0b52309",
+    "technical_context_correct": true,
+    "top_k": {
+      "1": {
+        "latency_seconds": 0.0023069649978424422,
+        "loaded_entries": 1,
+        "logical_bytes_read": 1303,
+        "target_recall": 1.0
+      },
+      "4": {
+        "latency_seconds": 0.002416219998849556,
+        "loaded_entries": 4,
+        "logical_bytes_read": 3451,
+        "target_recall": 1.0
+      },
+      "8": {
+        "latency_seconds": 0.0025850960009847768,
+        "loaded_entries": 4,
+        "logical_bytes_read": 3451,
+        "target_recall": 1.0
+      }
+    },
+    "unsupported_model_claim_promoted": false
+  },
+  "package_file_sha256": "faa701fb6150738937fc7b756fb5df226638eedb7599127b0d04d83899ea4bf9",
+  "package_path": "artifacts/personality-proof.ppkg",
+  "phase_c_started": false,
+  "protocol": "pcm-canonical-personality-v1"
+}

@@ -1,0 +1,38 @@
+{
+  "generated_from": {
+    "active-system-audit.json": "6eb3e401023b5878b2bbfb9055fd921999b571f6216e370b12440b7d343c0a1d",
+    "active-system-cuda-attribution.json": "ffe0e8f32f9a1a059767607f0c5e0432b6baf2a9917dc56877f794458b1a5e1c",
+    "debug-actions-profile.json": "3ca4cc8ac002dc30bd6c33d1bdae764bfc3e43534498eecc98a5168069784bd4",
+    "gemma-native-prompt-equivalence.json": "f6823b9b5a5fd69ebf75c8aadc8efa23fe0a6eaac7a1eaa81c398a3fdb200e79",
+    "gemma4-e4b-q8-causal.json": "a15a862dbc5dde547e7124ce3c3f16d015c15b79730bc60b7e92425e471ecb0f",
+    "phase-b-factorized-representation.json": "602bf8b8b1d07b8100b13f9842790f87ae6a5229ddc2d66377130d15413a870f",
+    "phase-b-personality-package.json": "5d17cbd8cecc8398105d3d53ff05e1b7941dd0732ac3d68a761790b64799bf06",
+    "phase-b-split-translator.json": "4a8cdc0c2bc73a1fc10f974f20d88be4902331a07b92928edb089b852bc1a845",
+    "post-turn-memory-review-acceptance.json": "89cb901c1665e9fd1515ef9165580a4bd3c4d9774f23976fdc6f366ef88c6b24",
+    "ppkg-100k-profile.json": "f5ff5233632bf5bf860fefedeec560e10a3f32729f4b6a767d0b3538d9c33a05",
+    "vram-comparison.json": "1b1e266c3f6513a5708711f09879a6519ce45abdaea7ba16d04f2510f5c1fc8d"
+  },
+  "public_binary_artifacts": {
+    "canonical-p-v1.router": "29e0728c12f8806c48998579aedcfa389fa398f909098e162710eb2a5709834e",
+    "gemma4-e4b-q8-llama.ltl": "7eee07ed813796dd0d25b04b48aec73507b934479ad8902e1b657653c040781a",
+    "personality-proof.ppkg": "faa701fb6150738937fc7b756fb5df226638eedb7599127b0d04d83899ea4bf9",
+    "pythia-1.4b-final-layer.ttl": "72ef68d07ee27c37b90432d34d4be5c2c280ae1bcb08236e37a0e458c054d8d7"
+  },
+  "publication_copy": {
+    "machine_paths_normalized": true,
+    "third_party_model_or_tokenizer_payloads": false
+  },
+  "selected_configuration": {
+    "base_model": "pythia-1.4b",
+    "canonical_protocol": "pcm-canonical-p-v1",
+    "gemma_ltl_format": "planner-cache-ltl-v1",
+    "gemma_ltl_parameters": 0,
+    "gemma_model": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive",
+    "ppkg_format": "pcm-personality-package-v1",
+    "ppkg_protocol": "pcm-canonical-personality-v1",
+    "router_format": "pcm-canonical-router-v1",
+    "selected_attachment": "final_layer",
+    "ttl_format": "planner-cache-ttl-v1",
+    "ttl_parameters": 2707464
+  }
+}

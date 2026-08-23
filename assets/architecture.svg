@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#385170"/></marker>
+</defs>
+<rect width="1400" height="820" fill="#f8fafc"/>
+<text x="700" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#12233f">Planner Cache publication architecture</text>
+<text x="700" y="86" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#50627a">Portable bounded semantic state for frozen language models</text>
+<rect x="45" y="125" width="1310" height="220" rx="22" fill="#edf4fb" stroke="#7da2c8" stroke-width="2"/>
+<text x="75" y="160" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#244d76">Model and runtime owned</text>
+<rect x="90" y="195" width="260" height="105" rx="16" fill="#ffffff" stroke="#2c7a7b" stroke-width="3"/>
+<text x="220" y="235" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#1f5960">Recent KV</text>
+<text x="220" y="266" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#50627a">Exact recent wording</text>
+<rect x="570" y="195" width="260" height="105" rx="16" fill="#ffffff" stroke="#315c9b" stroke-width="3"/>
+<text x="700" y="235" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#244d76">Frozen model</text>
+<text x="700" y="266" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#50627a">Pythia and Gemma proof paths</text>
+<rect x="1050" y="195" width="260" height="105" rx="16" fill="#ffffff" stroke="#6856a5" stroke-width="3"/>
+<text x="1180" y="229" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#55428e">History and tools</text>
+<text x="1180" y="259" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#50627a">Archive and retrieval systems</text>
+<text x="1180" y="282" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#50627a">Outside Planner Cache core</text>
+<rect x="45" y="390" width="1310" height="350" rx="22" fill="#fff7ed" stroke="#cf8a49" stroke-width="2"/>
+<text x="75" y="425" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#91501e">Planner Cache owned</text>
+<rect x="85" y="442" width="245" height="32" rx="12" fill="#fffdf8" stroke="#b36a2e" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="207" y="464" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#8f4d1e">Hidden post-turn review</text>
+<rect x="85" y="485" width="245" height="125" rx="16" fill="#ffffff" stroke="#b36a2e" stroke-width="3"/>
+<text x="207" y="527" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#8f4d1e">P-cache</text>
+<text x="207" y="558" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#50627a">Bounded mutable state</text>
+<text x="207" y="582" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#50627a">Canonical P protocol</text>
+<rect x="405" y="485" width="245" height="125" rx="16" fill="#ffffff" stroke="#3e7c59" stroke-width="3"/>
+<text x="527" y="527" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#2d6848">Universal router</text>
+<text x="527" y="558" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#50627a">Canonical selection</text>
+<text x="527" y="582" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#50627a">Model independent</text>
+<rect x="725" y="485" width="245" height="125" rx="16" fill="#ffffff" stroke="#315c9b" stroke-width="3"/>
+<text x="847" y="527" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#244d76">.ttl / .ltl</text>
+<text x="847" y="558" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#50627a">Compatibility boundary</text>
+<text x="847" y="582" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#50627a">Semantic / lexical</text>
+<rect x="1045" y="485" width="245" height="125" rx="16" fill="#ffffff" stroke="#6856a5" stroke-width="3"/>
+<text x="1167" y="527" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#55428e">P-package</text>
+<text x="1167" y="558" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#50627a">Disk resident personality</text>
+<text x="1167" y="582" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#50627a">Portable .ppkg</text>
+<path d="M 330 548 L 395 548" stroke="#385170" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+<path d="M 207 474 L 207 482" stroke="#b36a2e" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<path d="M 700 300 C 650 375 350 385 225 439" stroke="#b36a2e" stroke-width="2" stroke-dasharray="8 6" fill="none" marker-end="url(#arrow)"/>
+<path d="M 650 548 L 715 548" stroke="#385170" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+<path d="M 1045 620 C 930 695 585 695 527 620" stroke="#6856a5" stroke-width="3" stroke-dasharray="10 7" fill="none" marker-end="url(#arrow)"/>
+<path d="M 847 485 C 820 405 755 335 710 302" stroke="#315c9b" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+<path d="M 350 247 L 558 247" stroke="#2c7a7b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="700" y="782" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#50627a">Canonical files never store base weights, token IDs, conversation text, or model-native hidden vectors</text>
+</svg>
