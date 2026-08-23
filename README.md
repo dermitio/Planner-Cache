@@ -189,8 +189,8 @@ The strongest current limitations are the lack of a full trained open-vocabulary
 
 ## Citation
 
-Citation metadata is available in [CITATION.bib](CITATION.bib). Author and release metadata should be finalized before a public release.
+Citation metadata is available in [CITATION.bib](CITATION.bib).
 
 ## License
 
-Base-model weights, tokenizer bundles, datasets, and third-party runtime files are not included in this pack. Historical training-data license notes are recorded in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). A repository-wide software license is not currently present and is listed as a publication blocker.
+Planner Cache is licensed under Apache-2.0. Third-party model weights, tokenizer bundles, datasets, and runtime files are not redistributed by this repository and remain subject to their respective licenses.
